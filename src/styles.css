@@ -1283,6 +1283,11 @@ textarea {
   .mobile-nav .ui-icon {
     color: #8fd0f4;
   }
+
+  .mobile-nav .active {
+    color: #fff;
+    background: #183b5f;
+  }
 }
 
 @media (max-width: 640px) {

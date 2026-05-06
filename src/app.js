@@ -215,9 +215,9 @@ function renderWorkspace(wallet) {
       </main>
 
       <nav class="mobile-nav" aria-label="Mobil navigation">
-        <button type="button">${icon("layout")}<span>Översikt</span></button>
-        <button type="button">${icon("repeat")}<span>Kostnader</span></button>
-        <button type="button">${icon("database")}<span>Data</span></button>
+        <button class="${state.view === "overview" ? "active" : ""}" data-view="overview" type="button">${icon("layout")}<span>Översikt</span></button>
+        <button class="${state.view === "recurring" ? "active" : ""}" data-view="recurring" type="button">${icon("repeat")}<span>Kostnader</span></button>
+        <button class="${state.view === "data" ? "active" : ""}" data-view="data" type="button">${icon("database")}<span>Data</span></button>
       </nav>
     </div>
     ${state.modal === "expense" ? renderExpenseModal(wallet, editingExpense) : ""}
