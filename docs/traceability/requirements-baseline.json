@@ -1,0 +1,1326 @@
+{
+  "generatedAt": "2026-05-05T13:50:19.341Z",
+  "source": {
+    "file": "docs/out-001-bmad-prepared-framing-handoff.json",
+    "profile": "bmad_prepared",
+    "version": 6,
+    "exportedAt": "2026-05-05T13:37:57.648Z",
+    "approval": {
+      "status": "approved",
+      "approved_version": 43,
+      "approved_at": "2026-05-05T13:35:42.531Z",
+      "signoffs": [
+        {
+          "role": "aqa",
+          "person": "Denzel Washington",
+          "role_title": "AI Quality Authority",
+          "side": "supplier",
+          "note": "ok",
+          "approved_at": "2026-05-05T13:35:40.497Z"
+        },
+        {
+          "role": "value owner",
+          "person": "Anne Hathaway",
+          "role_title": "Value Owner",
+          "side": "customer",
+          "note": "ok",
+          "approved_at": "2026-05-05T13:35:21.088Z"
+        }
+      ]
+    }
+  },
+  "outcome": {
+    "id": "OUT-001",
+    "title": "Trygg kontroll över privata återkommande kostnader och enskilda köp",
+    "problemStatement": "Private users and households need a local-first way to understand recurring costs, one-off purchases, cancellation opportunities, and spending impact without account or bank connection.",
+    "outcomeStatement": "En privatperson eller ett hushåll ska snabbt förstå vad som dras, vad som kan sägas upp, vad som köps enskilt och hur privatekonomin påverkas över tid, utan konto eller bankkoppling.",
+    "timeframe": "2026 Q2",
+    "valueOwner": "Anne Hathaway",
+    "aiLevel": "level_3",
+    "riskProfile": "low",
+    "dataSensitivity": "Hög. Men hanteras med lokal fillagring"
+  },
+  "constraints": {
+    "raw": "## General constraints\nImported constraints\n- Data, Storage and Technical Constraints: ## 8. Data, Storage and Technical Constraints | Constraint ID | Constraint | Detail | Linked refs | | --- | --- | --- | --- | | CON-001 | Local-first | Appen ska fungera utan server, konto eller bankkoppling. Primär l...\n\n## UX principles\nUX direction\nUX profile: Enterprise control plane (enterprise-control-plane)\nTarget surface: Responsive web app (responsive-web)\nColor schema: Nordic blue (nordic-blue)\nStyle authority: AAS suggested style (aas-suggested-style)\n\nStyle priority:\nThe selected AAS UX direction is the primary source unless explicit customer UX rules are added in the additional instructions.\nIf customer UX rules are supplied, downstream AI must explicitly resolve conflicts using this style authority before applying AAS profile, color, or signature component guidance.\n\nCore UX guidance:\nPrioritize dashboard density, strong hierarchy, audit-ready status, table/list scanning, durable navigation, and clear ownership of decisions.\n\nDownstream AI visual grammar:\nThe selected UX profile must materially change layout, components, density, navigation, and status treatment. Do not collapse this into a generic SaaS card UI.\n- Use dense control-plane layouts with compact rectangular cards, tables, right rails, and persistent navigation.\n- Prefer squared or small-radius controls, clear borders, muted surfaces, and high information density.\n- Place owner, status, evidence, version, and governance action together so the decision context is never hidden.\n\nSignature components to prefer when relevant:\nUse these as primary building blocks before generic button/select/input examples. Generic controls should support the signature component, not define the experience.\n- Approval matrix for comparing owners, evidence, risk, and approval state.\n- Audit trail rail beside forms and review screens.\n- Readiness scorecard for tollgate, release, or portfolio decisions.\n\nSurface guidance:\nDesign from responsive web constraints with clear desktop density and a readable mobile layout for core review and input tasks.\n\nColor guidance:\nUse cool blues with clean neutrals, restrained accents, high contrast, and a calm professional tone.\n\nAdditional UX instructions:\nImported UX input\n- UX Specification: ## 6. UX Specification ### 6.1 UX Direction | UX ID | Attribute | Spec | Linked refs | | --- | --- | --- | --- | | UX-001 | UX profile | Private finance control plane: tät, lugn, handlingsorienterad och jämförbar. | O...",
+    "scopeOut": [
+      "Exkluderar kontobaserad multi-user-synk.",
+      "Exkluderar fakturaskanning som automatisk källa.",
+      "Exkluderar avancerad kalenderplanering.",
+      "Exkluderar automatisk uppsägning hos leverantör.",
+      "Exkluderar full CRM eller dokumentarkiv.",
+      "Exkluderar direkt bankintegration.",
+      "Exkluderar hosted backend som krav.",
+      "Exkluderar marketing-landningssida.",
+      "Exkluderar flerårig forecasting med osäkerhetsmodell.",
+      "Exkluderar riktig betalvägg."
+    ]
+  },
+  "baseline": {
+    "definition": "Product regeneration package dated 2026-05-05 defines the current product intent, trace IDs, journeys, UX rules, calculation rules, constraints, acceptance checklist, and known gaps.",
+    "source": "product-regeneration-package.md\r\nMeasurement Method: Användaren kan skapa en plånbok, registrera återkommande utgifter, importera eller lägga in enskilda köp, se tidslinje/statistik, markera signaler, exportera data och agera på uppsägningar eller besparingsmöjligheter.",
+    "warnings": [],
+    "readiness": "ready"
+  },
+  "journeys": [
+    {
+      "id": "JNY-001",
+      "title": "Skapa första kontrollbilden",
+      "actor": "Ny privat användare",
+      "goal": "Komma från tom app till en första begriplig vy över återkommande kostnader.",
+      "trigger": "Användaren öppnar appen första gången eller efter rensad data.",
+      "linkedEpicIds": [
+        "EP-001",
+        "EP-002",
+        "EP-003"
+      ],
+      "linkedStoryIdeaIds": [
+        "US-001",
+        "US-002",
+        "US-008",
+        "US-015",
+        "US-016",
+        "US-020",
+        "US-022"
+      ],
+      "steps": [
+        {
+          "id": "JNY-001-STEP-01",
+          "title": "Användaren skapar plånbok och lägger till minst en person.",
+          "description": "Användaren skapar plånbok och lägger till minst en person."
+        },
+        {
+          "id": "JNY-001-STEP-02",
+          "title": "Användaren väljer mall eller standardstruktur.",
+          "description": "Användaren väljer mall eller standardstruktur."
+        },
+        {
+          "id": "JNY-001-STEP-03",
+          "title": "Användaren lägger in första återkommande utgift med belopp och period.",
+          "description": "Användaren lägger in första återkommande utgift med belopp och period."
+        },
+        {
+          "id": "JNY-001-STEP-04",
+          "title": "Appen visar tidslinje, månadstotal och utgiftsrad.",
+          "description": "Appen visar tidslinje, månadstotal och utgiftsrad."
+        },
+        {
+          "id": "JNY-001-STEP-05",
+          "title": "Användaren öppnar detalj och ser att posten kan redigeras eller kompl...",
+          "description": "Användaren öppnar detalj och ser att posten kan redigeras eller kompletteras."
+        }
+      ]
+    },
+    {
+      "id": "JNY-002",
+      "title": "Hitta uppsägningsmöjlighet",
+      "actor": "Användare med flera abonnemang",
+      "goal": "Förstå när en kostnad kan tas bort och få minnesstöd.",
+      "trigger": "Användaren vill minska månadskostnad.",
+      "linkedEpicIds": [
+        "EP-004",
+        "EP-008",
+        "EP-011"
+      ],
+      "linkedStoryIdeaIds": [
+        "US-030",
+        "US-031",
+        "US-032",
+        "US-033",
+        "US-034",
+        "US-075",
+        "US-094"
+      ],
+      "steps": [
+        {
+          "id": "JNY-002-STEP-01",
+          "title": "Användaren öppnar statistik eller tidslinje och identifierar en påver...",
+          "description": "Användaren öppnar statistik eller tidslinje och identifierar en påverkbar kostnad."
+        },
+        {
+          "id": "JNY-002-STEP-02",
+          "title": "Användaren öppnar detaljen och anger eller kontrollerar uppsägningstid.",
+          "description": "Användaren öppnar detaljen och anger eller kontrollerar uppsägningstid."
+        },
+        {
+          "id": "JNY-002-STEP-03",
+          "title": "Appen visar låst period och tidigaste fria månad.",
+          "description": "Appen visar låst period och tidigaste fria månad."
+        },
+        {
+          "id": "JNY-002-STEP-04",
+          "title": "Användaren skapar/behåller påminnelse och exporterar kalenderfil vid ...",
+          "description": "Användaren skapar/behåller påminnelse och exporterar kalenderfil vid behov."
+        },
+        {
+          "id": "JNY-002-STEP-05",
+          "title": "Användaren kan simulera bort kostnaden och se effekt utan att spara a...",
+          "description": "Användaren kan simulera bort kostnaden och se effekt utan att spara avslut."
+        }
+      ]
+    },
+    {
+      "id": "JNY-003",
+      "title": "Importera och rensa köp",
+      "actor": "Användare med kontoutdrag",
+      "goal": "Få in faktisk konsumtion och sortera bort sådant som inte behöver granskas.",
+      "trigger": "Användaren har en CSV, XLSX eller PDF från kort/konto.",
+      "linkedEpicIds": [
+        "EP-006",
+        "EP-007",
+        "EP-008",
+        "EP-010"
+      ],
+      "linkedStoryIdeaIds": [
+        "US-045",
+        "US-046",
+        "US-047",
+        "US-048",
+        "US-052",
+        "US-053",
+        "US-054",
+        "US-056",
+        "US-057",
+        "US-073"
+      ],
+      "steps": [
+        {
+          "id": "JNY-003-STEP-01",
+          "title": "Användaren väljer importera kontoutdrag.",
+          "description": "Användaren väljer importera kontoutdrag."
+        },
+        {
+          "id": "JNY-003-STEP-02",
+          "title": "Appen tolkar filen och visar importförhandsgranskning.",
+          "description": "Appen tolkar filen och visar importförhandsgranskning."
+        },
+        {
+          "id": "JNY-003-STEP-03",
+          "title": "Användaren kontrollerar antal, totalsumma och enskilda rader.",
+          "description": "Användaren kontrollerar antal, totalsumma och enskilda rader."
+        },
+        {
+          "id": "JNY-003-STEP-04",
+          "title": "Användaren importerar och går till Inköp.",
+          "description": "Användaren importerar och går till Inköp."
+        },
+        {
+          "id": "JNY-003-STEP-05",
+          "title": "Användaren använder köpradar och signaler för att granska, markera on...",
+          "description": "Användaren använder köpradar och signaler för att granska, markera onödigt, värt det eller business."
+        }
+      ]
+    },
+    {
+      "id": "JNY-004",
+      "title": "Skapa återkommande från köp",
+      "actor": "Användare som upptäcker abonnemang i kontoutdrag",
+      "goal": "Flytta ett återkommande mönster från historiskt köp till framtidsprognos.",
+      "trigger": "Ett köp markeras som Återkommande eller känns som abonnemang.",
+      "linkedEpicIds": [
+        "EP-006",
+        "EP-007",
+        "EP-008"
+      ],
+      "linkedStoryIdeaIds": [
+        "US-055",
+        "US-060",
+        "US-061",
+        "US-064",
+        "US-066"
+      ],
+      "steps": [
+        {
+          "id": "JNY-004-STEP-01",
+          "title": "Användaren öppnar köpmodalen.",
+          "description": "Användaren öppnar köpmodalen."
+        },
+        {
+          "id": "JNY-004-STEP-02",
+          "title": "Köpet är förifyllt med handlare, belopp, kategori, betalare och datum.",
+          "description": "Köpet är förifyllt med handlare, belopp, kategori, betalare och datum."
+        },
+        {
+          "id": "JNY-004-STEP-03",
+          "title": "Användaren väljer skapa återkommande.",
+          "description": "Användaren väljer skapa återkommande."
+        },
+        {
+          "id": "JNY-004-STEP-04",
+          "title": "Appen skapar återkommande utgift med köpdatum som första betalningsda...",
+          "description": "Appen skapar återkommande utgift med köpdatum som första betalningsdatum."
+        },
+        {
+          "id": "JNY-004-STEP-05",
+          "title": "Originalköpet kopplas som första betalning och försvinner inte ur his...",
+          "description": "Originalköpet kopplas som första betalning och försvinner inte ur historiken."
+        }
+      ]
+    },
+    {
+      "id": "JNY-005",
+      "title": "Göra återkommande till enskilt köp",
+      "actor": "Användare som felklassat en kostnad",
+      "goal": "Korrigera en post som inte längre ska påverka återkommande prognos.",
+      "trigger": "Användaren upptäcker att en återkommande utgift egentligen var ett enskilt köp.",
+      "linkedEpicIds": [
+        "EP-002",
+        "EP-006",
+        "EP-007"
+      ],
+      "linkedStoryIdeaIds": [
+        "US-012",
+        "US-043",
+        "US-062",
+        "US-063"
+      ],
+      "steps": [
+        {
+          "id": "JNY-005-STEP-01",
+          "title": "Användaren öppnar utgiftsdetaljen.",
+          "description": "Användaren öppnar utgiftsdetaljen."
+        },
+        {
+          "id": "JNY-005-STEP-02",
+          "title": "Användaren väljer konvertera till enskilt köp.",
+          "description": "Användaren väljer konvertera till enskilt köp."
+        },
+        {
+          "id": "JNY-005-STEP-03",
+          "title": "Appen skapar köp med motsvarande data.",
+          "description": "Appen skapar köp med motsvarande data."
+        },
+        {
+          "id": "JNY-005-STEP-04",
+          "title": "Återkommande utgift tas bort/avslutas enligt konverteringsregel och k...",
+          "description": "Återkommande utgift tas bort/avslutas enligt konverteringsregel och kopplade köp lossas."
+        }
+      ]
+    },
+    {
+      "id": "JNY-006",
+      "title": "Analysera påverkan",
+      "actor": "Användare som vill prioritera nästa beslut",
+      "goal": "Se vilka kostnader, handlare, kategorier och perioder som påverkar mest.",
+      "trigger": "Användaren går till Statistik efter att ha lagt in/importerat data.",
+      "linkedEpicIds": [
+        "EP-008"
+      ],
+      "linkedStoryIdeaIds": [
+        "US-064",
+        "US-065",
+        "US-066",
+        "US-067",
+        "US-068",
+        "US-069",
+        "US-070",
+        "US-071",
+        "US-072",
+        "US-074",
+        "US-075"
+      ],
+      "steps": [
+        {
+          "id": "JNY-006-STEP-01",
+          "title": "Användaren öppnar Statistik.",
+          "description": "Användaren öppnar Statistik."
+        },
+        {
+          "id": "JNY-006-STEP-02",
+          "title": "Appen visar återkommande analys, köpvolym, budgetutfall och beslutsin...",
+          "description": "Appen visar återkommande analys, köpvolym, budgetutfall och beslutsinsikter."
+        },
+        {
+          "id": "JNY-006-STEP-03",
+          "title": "Användaren granskar \"Mest pengar\" och \"Flest transaktioner\" separat.",
+          "description": "Användaren granskar \"Mest pengar\" och \"Flest transaktioner\" separat."
+        },
+        {
+          "id": "JNY-006-STEP-04",
+          "title": "Användaren identifierar en topphandlare, kategori eller dragningsdag.",
+          "description": "Användaren identifierar en topphandlare, kategori eller dragningsdag."
+        },
+        {
+          "id": "JNY-006-STEP-05",
+          "title": "Användaren går tillbaka till relevant detalj eller filter.",
+          "description": "Användaren går tillbaka till relevant detalj eller filter."
+        }
+      ]
+    },
+    {
+      "id": "JNY-007",
+      "title": "Skydda lokal data",
+      "actor": "Användare som vill undvika datatapp",
+      "goal": "Exportera, spara eller flytta data utan konto.",
+      "trigger": "Användaren går till Data-vyn eller ska byta enhet/browser.",
+      "linkedEpicIds": [
+        "EP-009",
+        "EP-012"
+      ],
+      "linkedStoryIdeaIds": [
+        "US-076",
+        "US-077",
+        "US-078",
+        "US-079",
+        "US-080",
+        "US-081",
+        "US-082",
+        "US-083",
+        "US-084",
+        "US-099",
+        "US-100"
+      ],
+      "steps": [
+        {
+          "id": "JNY-007-STEP-01",
+          "title": "Användaren läser lokal datarisk i Data-vyn.",
+          "description": "Användaren läser lokal datarisk i Data-vyn."
+        },
+        {
+          "id": "JNY-007-STEP-02",
+          "title": "Användaren exporterar JSON/ZIP eller skapar datafil.",
+          "description": "Användaren exporterar JSON/ZIP eller skapar datafil."
+        },
+        {
+          "id": "JNY-007-STEP-03",
+          "title": "Vid ny miljö importerar användaren filen som ny plånbok eller ersätte...",
+          "description": "Vid ny miljö importerar användaren filen som ny plånbok eller ersätter state via datafil."
+        },
+        {
+          "id": "JNY-007-STEP-04",
+          "title": "Vid behov skapas PDF/CSV för rapport eller vidare analys.",
+          "description": "Vid behov skapas PDF/CSV för rapport eller vidare analys."
+        }
+      ]
+    },
+    {
+      "id": "JNY-008",
+      "title": "Anpassa signaler och moduler",
+      "actor": "Power user eller hushållsansvarig",
+      "goal": "Göra appens språk och funktioner mer relevanta för vardagen.",
+      "trigger": "Användaren vill kalla Business för Utlägg eller dölja köpmodul.",
+      "linkedEpicIds": [
+        "EP-007",
+        "EP-012"
+      ],
+      "linkedStoryIdeaIds": [
+        "US-058",
+        "US-097",
+        "US-098"
+      ],
+      "steps": [
+        {
+          "id": "JNY-008-STEP-01",
+          "title": "Användaren öppnar Data/inställningar.",
+          "description": "Användaren öppnar Data/inställningar."
+        },
+        {
+          "id": "JNY-008-STEP-02",
+          "title": "Användaren byter label på business-signalen.",
+          "description": "Användaren byter label på business-signalen."
+        },
+        {
+          "id": "JNY-008-STEP-03",
+          "title": "Användaren slår på/av inköpsmodul eller testar planflagga.",
+          "description": "Användaren slår på/av inköpsmodul eller testar planflagga."
+        },
+        {
+          "id": "JNY-008-STEP-04",
+          "title": "Appen visar ny term i radar, filter, köpmodal och statistik.",
+          "description": "Appen visar ny term i radar, filter, köpmodal och statistik."
+        }
+      ]
+    }
+  ],
+  "epics": [
+    {
+      "id": "EP-001",
+      "title": "Plånbok, onboarding och dataseparering",
+      "scopeBoundary": "Scope in: Inkluderar skapa, välja, duplicera och konfigurera plånbok samt första användare. Exkluderar kontobaserad multi-user-synk.",
+      "stories": [
+        {
+          "id": "US-001",
+          "title": "Skapa första plånboken",
+          "valueIntent": "Användaren ska snabbt komma från tom app till egen ekonomisk yta.",
+          "expectedBehavior": "Onboarding låter användaren ange plånboksnamn, välja mall och skapa första kontexten.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-002",
+          "title": "Kräva minst en första användare",
+          "valueIntent": "Statistik per betalare och nya utgifter ska fungera direkt.",
+          "expectedBehavior": "När första plånboken skapas promptas användaren att lägga till minst en person/betalare.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-003",
+          "title": "Välja aktiv plånbok",
+          "valueIntent": "Flera ekonomiska sammanhang ska kunna hållas isär.",
+          "expectedBehavior": "Kontextväljaren byter aktiv plånbok och alla vyer filtreras till den.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-004",
+          "title": "Konfigurera tidsfönster",
+          "valueIntent": "Användaren ska kunna styra hur långt bakåt/framtåt planeringen visas.",
+          "expectedBehavior": "Plånbokens månader bakåt och framåt kan ändras och påverkar tidslinje/statistik.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EP-002",
+      "title": "Återkommande utgifter",
+      "scopeBoundary": "Scope in: Inkluderar belopp, period, leverantör, kategori, betalare, datum, status, signaler och anteckningar. Exkluderar fakturaskanning som automatisk källa.",
+      "stories": []
+    },
+    {
+      "id": "EP-003",
+      "title": "Tidslinje och översikt",
+      "scopeBoundary": "Scope in: Inkluderar desktop-tidslinje, mobilöversikt, filter, sök, totals och snabblänkar. Exkluderar avancerad kalenderplanering.",
+      "stories": []
+    },
+    {
+      "id": "EP-004",
+      "title": "Uppsägning, låsning och påminnelser",
+      "scopeBoundary": "Scope in: Inkluderar uppsägningstid, låst period, tidigaste fria månad, avslut, påminnelse och kalenderexport. Exkluderar automatisk uppsägning hos leverantör.",
+      "stories": []
+    },
+    {
+      "id": "EP-005",
+      "title": "Register och återanvändbar metadata",
+      "scopeBoundary": "Scope in: Inkluderar personer, leverantörer, kategorier, färg/ikon, kontaktinfo och kategoriregler. Exkluderar full CRM eller dokumentarkiv.",
+      "stories": []
+    },
+    {
+      "id": "EP-006",
+      "title": "Enskilda köp och kontoutdragsimport",
+      "scopeBoundary": "Scope in: Inkluderar manuella köp, import från CSV/XLSX/PDF, importförhandsgranskning, deduplicering, kategorisering och köpdetalj. Exkluderar direkt bankintegration.",
+      "stories": [
+        {
+          "id": "US-043",
+          "title": "Skapa enskilt köp manuellt",
+          "valueIntent": "Fånga konsumtion som inte är återkommande.",
+          "expectedBehavior": "Formulär sparar datum, bokfört datum, handlare, belopp, kategori, betalare, typ, flaggor och anteckning.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-044",
+          "title": "Redigera enskilt köp",
+          "valueIntent": "Korrigera importerade eller manuella köp.",
+          "expectedBehavior": "Köpmodalen kan ändra fält och spara utan att tappa import/koppling.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-045",
+          "title": "Importera kontoutdrag",
+          "valueIntent": "Snabbt få in många köp.",
+          "expectedBehavior": "CSV, XLSX och PDF kan läsas och omvandlas till köptransaktioner.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EP-007",
+      "title": "Signaler, klassning och konvertering",
+      "scopeBoundary": "Scope in: Inkluderar Granska, Onödigt, Återkommande, Värt det, Business, namnbyte av business-signal, köp -> återkommande och återkommande -> köp.",
+      "stories": [
+        {
+          "id": "US-054",
+          "title": "Markera Onödigt",
+          "valueIntent": "Synliggöra konsumtion att lära av.",
+          "expectedBehavior": "Köp/utgift kan signaleras som onödigt och räknas i signalstatistik.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EP-008",
+      "title": "Statistik och beslutsstöd",
+      "scopeBoundary": "Scope in: Inkluderar återkommande analys, köpstatistik, köpradar, budgetutfall, kategori/person/leverantör, topphandlare och periodtrender.",
+      "stories": []
+    },
+    {
+      "id": "EP-009",
+      "title": "Dataexport, backup, datafil och sync",
+      "scopeBoundary": "Scope in: Inkluderar localStorage, JSON/ZIP/CSV/PDF/ICS, datafil, delningsfil, import som ny plånbok och experimentell molnsync via egen endpoint. Exkluderar hosted backend som krav.",
+      "stories": []
+    },
+    {
+      "id": "EP-010",
+      "title": "Responsiv UX, hjälp och tomlägen",
+      "scopeBoundary": "Scope in: Inkluderar navigering, modaler, drawer, tomlägen, hjälpvy, mobilanpassade kort och primära actions. Exkluderar marketing-landningssida.",
+      "stories": []
+    },
+    {
+      "id": "EP-011",
+      "title": "Simulering och scenarioanalys",
+      "scopeBoundary": "Scope in: Inkluderar simulera bort återkommande utgift, simulerad statistik och återställning. Exkluderar flerårig forecasting med osäkerhetsmodell.",
+      "stories": []
+    },
+    {
+      "id": "EP-012",
+      "title": "Produktadministration och planflaggor",
+      "scopeBoundary": "Scope in: Inkluderar Data-vy, lokal varning, premium/free-flagga, köp på/av och namn på business-signal. Exkluderar riktig betalvägg.",
+      "stories": []
+    },
+    {
+      "id": "EPC-001",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-005",
+          "title": "Duplicera plånbok som mall",
+          "valueIntent": "Återanvända struktur utan att bygga om register.",
+          "expectedBehavior": "Appen kan skapa en ny plånbok med kopierad struktur enligt befintlig mall.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-006",
+          "title": "Radera plånbok säkert",
+          "valueIntent": "Ta bort fel eller testdata utan att lämna relationer kvar.",
+          "expectedBehavior": "Radering tar bort relaterade personer, leverantörer, kategorier, utgifter, köp, filer, regler och filterreferenser.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-007",
+          "title": "Visa tomt startläge",
+          "valueIntent": "En ny användare ska förstå nästa steg.",
+          "expectedBehavior": "Tom app visar tydlig startyta för ny plånbok eller demo/skip utan döda ytor.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-008",
+          "title": "Skapa återkommande månadsutgift",
+          "valueIntent": "Registrera vanligaste kostnadstypen.",
+          "expectedBehavior": "Formulär sparar namn, belopp, månad, dragningsdag, period, kategori, betalare och leverantör.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-009",
+          "title": "Skapa kvartals- och årsutgift",
+          "valueIntent": "Återkommande kostnader med annan periodicitet ska periodiseras rätt.",
+          "expectedBehavior": "Val av kvartal/år påverkar periodiserad statistik och kassaflöde korrekt.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-010",
+          "title": "Skapa engångsperiod",
+          "valueIntent": "Planerade engångskostnader ska kunna synas i rätt månad.",
+          "expectedBehavior": "Periodtypen engång ger belopp i aktuell period utan att återkomma.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-011",
+          "title": "Spara ofullständig utgift som utkast",
+          "valueIntent": "Användaren ska kunna fånga något snabbt utan komplett data.",
+          "expectedBehavior": "Saknas centrala fält sparas status draft och raden kan kompletteras senare.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-012",
+          "title": "Redigera återkommande utgift",
+          "valueIntent": "Felaktiga eller ändrade kostnader ska kunna korrigeras.",
+          "expectedBehavior": "Redigering uppdaterar utgift och period utan att skapa dubbletter.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-002",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-013",
+          "title": "Avsluta återkommande utgift",
+          "valueIntent": "Avslutade kostnader ska sluta påverka framtid men finnas i historik.",
+          "expectedBehavior": "Avslut sätter slutdatum/status och tidslinjen slutar räkna framtida månader.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-014",
+          "title": "Ta bort återkommande utgift",
+          "valueIntent": "Test eller felregistrering ska kunna rensas.",
+          "expectedBehavior": "Borttagning tar bort utgift och relaterade perioder samt kopplar loss eventuella köp.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-015",
+          "title": "Välja betalande person",
+          "valueIntent": "Fördelning per person ska vara möjlig.",
+          "expectedBehavior": "Utgift kan kopplas till person och synas i personsummeringar/filter.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-016",
+          "title": "Välja kategori",
+          "valueIntent": "Kostnadsmix ska bli begriplig.",
+          "expectedBehavior": "Utgift kan kopplas till kategori med färg/ikon och räknas i kategoriöversikter.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-017",
+          "title": "Välja eller skapa leverantör i flödet",
+          "valueIntent": "Registrering ska gå fort utan att lämna formuläret.",
+          "expectedBehavior": "Användaren kan välja befintlig leverantör eller skapa ny leverantör från utgiftsformuläret.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-018",
+          "title": "Ange anteckning",
+          "valueIntent": "Praktisk kontext ska kunna sparas utan separat dokument.",
+          "expectedBehavior": "Anteckning lagras på utgift och visas i detalj.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-019",
+          "title": "Bifoga underlag på utgift",
+          "valueIntent": "Kvitto, avtal eller faktura ska kunna hållas nära posten.",
+          "expectedBehavior": "Tillåtna filtyper kan bifogas och visas i utgiftsdetaljen.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-020",
+          "title": "Visa återkommande tidslinje",
+          "valueIntent": "Användaren ska se vilka månader varje utgift påverkar.",
+          "expectedBehavior": "Desktop visar utgifter som rader och månader som kolumner med belopp/aktivitet.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-003",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-021",
+          "title": "Visa mobil översikt",
+          "valueIntent": "Mobilanvändaren ska kunna läsa samma data utan tabellkaos.",
+          "expectedBehavior": "Mobilvy visar kompakta kort, månadsrader och expanderbara detaljer.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-022",
+          "title": "Visa månadstotaler",
+          "valueIntent": "Användaren ska förstå total belastning per månad.",
+          "expectedBehavior": "Månadsrubriker eller sammanfattningar visar totals för vald period.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-023",
+          "title": "Filtrera på kategori",
+          "valueIntent": "Fokusera på en del av ekonomin.",
+          "expectedBehavior": "Kategorifilter påverkar tidslinje, översikt och relevanta summeringar.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-024",
+          "title": "Filtrera på betalare",
+          "valueIntent": "Se vem som bär vilka kostnader.",
+          "expectedBehavior": "Betalarfilter visar endast matchande utgifter/köp där relevant.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-025",
+          "title": "Filtrera på signal",
+          "valueIntent": "Användaren ska kunna se exempelvis Onödigt eller Business.",
+          "expectedBehavior": "Signalfilter påverkar köp/översikt och släcks visuellt när det avmarkeras.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-026",
+          "title": "Söka i utgifter och köp",
+          "valueIntent": "Hitta poster snabbt.",
+          "expectedBehavior": "Sök matchar namn, leverantör, handlare, kategori och relaterad text.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-027",
+          "title": "Dölja historiska månader",
+          "valueIntent": "Minska visuell belastning när fokus är framåt.",
+          "expectedBehavior": "Toggle tar bort tidigare månader från tidslinjens fokus.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-028",
+          "title": "Öppna detaljdrawer från tidslinje",
+          "valueIntent": "Snabbt gå från översikt till åtgärd.",
+          "expectedBehavior": "Klick på rad/cell öppnar detalj med redigera, avsluta, ta bort och filhantering.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-004",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-029",
+          "title": "Snabbregistrera från global action",
+          "valueIntent": "Ny data ska vara nära till hands oavsett vy.",
+          "expectedBehavior": "Quick action erbjuder återkommande utgift, enskilt köp och import.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-030",
+          "title": "Ange uppsägningstid",
+          "valueIntent": "Förstå när bindning/uppsägning påverkar ekonomin.",
+          "expectedBehavior": "Utgift kan ha uppsägningstid i dagar eller månader.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-031",
+          "title": "Beräkna tidigaste kostnadsfria månad",
+          "valueIntent": "Visa realistisk effekt av uppsägning.",
+          "expectedBehavior": "Appen beräknar första månad utan kostnad baserat på dagens datum och uppsägningstid.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-032",
+          "title": "Visa låst period",
+          "valueIntent": "Undvika falsk besparingssignal.",
+          "expectedBehavior": "Månader som inte kan frigöras än markeras låsta.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-064",
+          "title": "Visa återkommande analys",
+          "valueIntent": "Förstå planerad kostnadsbas.",
+          "expectedBehavior": "Statistik visar periodiserad period, månadssnitt, årstakt och signalmix.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-033",
+          "title": "Skapa uppsägningspåminnelse",
+          "valueIntent": "Minska risken att missa deadline.",
+          "expectedBehavior": "Relevant påminnelse skapas kopplat till utgift och kan markeras klar.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-034",
+          "title": "Exportera påminnelser till kalender",
+          "valueIntent": "Ta med åtgärder utanför appen.",
+          "expectedBehavior": "Appen kan exportera .ics för påminnelser.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-035",
+          "title": "Visa saknad uppsägningsinformation",
+          "valueIntent": "Synliggöra svag data.",
+          "expectedBehavior": "Poster utan uppsägningsdata eller instruktion kan flaggas som förbättringskandidater.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-005",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-036",
+          "title": "Skapa och redigera person",
+          "valueIntent": "Stödja hushåll och betalare.",
+          "expectedBehavior": "Register låter användaren skapa, ändra och inaktivera personer.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-037",
+          "title": "Ange månadsbudget per person",
+          "valueIntent": "Möjliggöra budgetutfall.",
+          "expectedBehavior": "Person kan ha disponibel månadsinkomst/budget som används i statistik.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-038",
+          "title": "Skapa och redigera leverantör",
+          "valueIntent": "Återanvänd företagsdata.",
+          "expectedBehavior": "Register hanterar namn, typ, ikon, färg, kontaktinfo och notes.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-039",
+          "title": "Spara uppsägningsinstruktion för leverantör",
+          "valueIntent": "Göra faktisk uppsägning enklare.",
+          "expectedBehavior": "Leverantör kan bära instruktion som visas vid relevant utgift.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-040",
+          "title": "Skapa och redigera kategori",
+          "valueIntent": "Hålla analysen begriplig.",
+          "expectedBehavior": "Kategori har namn, ikon och färg och används i utgifter/köp.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-041",
+          "title": "Skapa standardregister i ny plånbok",
+          "valueIntent": "Ge bra startdata.",
+          "expectedBehavior": "Ny state berikas med vanliga leverantörer och standardkategorier utan att radera användardata.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-042",
+          "title": "Skapa handlare/kategoriregel",
+          "valueIntent": "Importerade köp ska kunna föreslås rätt framåt.",
+          "expectedBehavior": "Appen sparar mönster för handlare och kan återanvända kategori/leverantör.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-046",
+          "title": "Förhandsgranska import",
+          "valueIntent": "Undvika att fel rader skrivs in.",
+          "expectedBehavior": "Appen visar antal köp, totalsumma, ignorerade rader och radlista före importcommit.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-006",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-047",
+          "title": "Deduplicera importerade köp",
+          "valueIntent": "Förhindra dubbla transaktioner.",
+          "expectedBehavior": "Fingerprint på datum, bokfört datum, belopp och handlare används för att hoppa över dubbletter.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-048",
+          "title": "Högerjustera belopp i import på mobil",
+          "valueIntent": "Belopp ska inte skrivas över av handlarnamn.",
+          "expectedBehavior": "Mobil importlista lägger belopp på egen/högerjusterad yta utan överlapp.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-049",
+          "title": "Koppla köp till betalare",
+          "valueIntent": "Konsumtion ska kunna summeras per person.",
+          "expectedBehavior": "Importerade/manuella köp får defaultbetalare och kan ändras.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-050",
+          "title": "Koppla köp till leverantör",
+          "valueIntent": "Enskilt köp kan höra ihop med sparad leverantör.",
+          "expectedBehavior": "Köp kan välja leverantör eller föreslå ny leverantör från handlare.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-051",
+          "title": "Uppdatera kategori för samma handlare",
+          "valueIntent": "Masskorrigera importfriktion.",
+          "expectedBehavior": "Vid köpredigering kan användaren applicera kategori på alla köp från samma handlare utan tung boxad UI.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-052",
+          "title": "Lista och filtrera köp",
+          "valueIntent": "Hantera inköpshistorik.",
+          "expectedBehavior": "Inköpsvyn visar köpradar, sök, lista, signaler och redigering.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-053",
+          "title": "Markera Granska",
+          "valueIntent": "Skapa arbetskö för okända köp.",
+          "expectedBehavior": "Köp kan flaggas för granskning och visas i köpradar/filter.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-055",
+          "title": "Markera Återkommande signal",
+          "valueIntent": "Identifiera köp som sannolikt bör bli återkommande utgift.",
+          "expectedBehavior": "Köp kan flaggas återkommande och visas med samma signalmönster som andra signaler.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-007",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-056",
+          "title": "Markera Värt det",
+          "valueIntent": "Skilja bra värde från läckor.",
+          "expectedBehavior": "Värt det-signal kan sättas/släckas och summeras separat.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-057",
+          "title": "Markera Business",
+          "valueIntent": "Separera jobb/utlägg från privat konsumtion.",
+          "expectedBehavior": "Business-signal kan sättas/släckas och påverka filter/statistik.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-058",
+          "title": "Byta namn på Business-signal",
+          "valueIntent": "Anpassa termen till användarens vardag.",
+          "expectedBehavior": "Data-vyn låter användaren namnge business-signalen exempelvis Utlägg.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-059",
+          "title": "Släcka signal visuellt när samma signal klickas igen",
+          "valueIntent": "Undvika mobilförvirring.",
+          "expectedBehavior": "Samma signal/tile togglar av och ser inte längre aktiv ut.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-060",
+          "title": "Konvertera köp till återkommande utgift",
+          "valueIntent": "Göra upptäckt mönster till prognos.",
+          "expectedBehavior": "Ett köp kan skapa ny återkommande utgift med köpets datum som första betalningsdatum och köpets data förifylld.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-061",
+          "title": "Koppla originalköp som första betalning",
+          "valueIntent": "Undvika dubbelräkning och behålla historik.",
+          "expectedBehavior": "När köp konverteras länkas originalköpet till den nya återkommande utgiften.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-062",
+          "title": "Konvertera återkommande utgift till enskilt köp",
+          "valueIntent": "Backa fel modellering.",
+          "expectedBehavior": "En återkommande utgift kan göras om till enskilt köp och eventuella länkade köp kopplas loss.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-063",
+          "title": "Välja transaktionstyp",
+          "valueIntent": "Skilja one-off, återkommande betalning, transfer och ignorerad rad.",
+          "expectedBehavior": "Köp har typfält och statistik/import filtrerar bort ignorerade rader.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-008",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-065",
+          "title": "Visa kategori- och leverantörstoppar för återkommande",
+          "valueIntent": "Prioritera stora återkommande poster.",
+          "expectedBehavior": "Kategorier och leverantörer rankas på total periodkostnad och visar månads-/årstakt.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-066",
+          "title": "Visa återkommande vs köp",
+          "valueIntent": "Jämföra åtaganden och faktisk konsumtion.",
+          "expectedBehavior": "Statistik visar periodtotal för återkommande och enskilda köp sida vid sida.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-067",
+          "title": "Rankar handlare efter mest pengar",
+          "valueIntent": "Stora engångsköp ska inte döljas av frekventa småköp.",
+          "expectedBehavior": "Mest pengar sorterar strikt på totalbelopp över vald period.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-068",
+          "title": "Rankar handlare efter flest transaktioner",
+          "valueIntent": "Identifiera vanor och frekvens.",
+          "expectedBehavior": "Flest transaktioner sorterar på antal, med total som tie-breaker.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-069",
+          "title": "Rankar kategorier efter mest pengar och antal",
+          "valueIntent": "Förstå konsumtionsmix både i pengar och aktivitet.",
+          "expectedBehavior": "Kategorilistor sorterar separat efter totalbelopp respektive antal.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-070",
+          "title": "Visa köpintelligens",
+          "valueIntent": "Ge snabb helhetsbild för köp.",
+          "expectedBehavior": "KPI:er visar total köpvolym, transaktioner, medelköp och antal handlare.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-071",
+          "title": "Visa handlare efter påverkan",
+          "valueIntent": "Hitta handlare som driver total, trend och snitt.",
+          "expectedBehavior": "Handlarlista visar total, antal, aktiva månader, snitt och trend/sparkline.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-072",
+          "title": "Visa köp per månad och år",
+          "valueIntent": "Förstå periodmönster.",
+          "expectedBehavior": "Periodsammanfattningar visar total, snitt och topphandlare per månad/år.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-009",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-073",
+          "title": "Visa köpradar",
+          "valueIntent": "Ge signalbaserad arbetsyta i inköpsvyn.",
+          "expectedBehavior": "Köpradar visar Granska, Onödigt, Återkommande, Värt det och Business/Utlägg med antal eller belopp.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-074",
+          "title": "Visa budgetutfall",
+          "valueIntent": "Visa om disponibel budget räcker.",
+          "expectedBehavior": "Statistik jämför budgetbidrag mot återkommande + köp och visar utfall per månad.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-075",
+          "title": "Visa beslutsinsikter",
+          "valueIntent": "Peka ut nästa rimliga åtgärd.",
+          "expectedBehavior": "Panel visar prioriterade insikter kring leverantör, dragningsdag, köp, toppmånad eller uppsägningskandidat.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-076",
+          "title": "Spara lokalt utan konto",
+          "valueIntent": "Sänka tröskel och skydda integritet.",
+          "expectedBehavior": "Appen fungerar lokalt med localStorage och kräver ingen inloggning.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-077",
+          "title": "Exportera JSON",
+          "valueIntent": "Göra komplett plånbok portabel.",
+          "expectedBehavior": "Export innehåller kontext, register, utgifter, perioder, filer, köp och regler.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-078",
+          "title": "Exportera ZIP med filer",
+          "valueIntent": "Säkerhetskopiera både data och bilagor.",
+          "expectedBehavior": "ZIP innehåller context.json och bifogade filer.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-079",
+          "title": "Importera som ny plånbok",
+          "valueIntent": "Undvika ID-krock och datatapp.",
+          "expectedBehavior": "Import remappar ID:n och skapar ny kontext bredvid befintlig data.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-080",
+          "title": "Exportera CSV",
+          "valueIntent": "Analysera utanför appen.",
+          "expectedBehavior": "CSV innehåller återkommande utgifter och köp med relevanta kolumner.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-010",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-081",
+          "title": "Exportera PDF-rapport",
+          "valueIntent": "Dela läsbar sammanfattning.",
+          "expectedBehavior": "PDF genereras med plånbok, totals och rapportmetadata.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-082",
+          "title": "Skapa fristående datafil",
+          "valueIntent": "Minska risk med bara browser-cache.",
+          "expectedBehavior": "Användaren kan spara en JSON-datafil via File System Access API där det stöds.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-083",
+          "title": "Återansluta datafil",
+          "valueIntent": "Fortsätta från samma lokala fil.",
+          "expectedBehavior": "Appen kan öppna tidigare datafil och autospara efter ändringar när rättighet finns.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-084",
+          "title": "Dela datafil/handoff",
+          "valueIntent": "Flytta data mellan enheter eller miljöer.",
+          "expectedBehavior": "Appen kan skapa delningsbar fil/HTML-handoff som kan läsas tillbaka.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-085",
+          "title": "Konfigurera experimentell molnsync",
+          "valueIntent": "Frivillig egen synk mellan enheter.",
+          "expectedBehavior": "Användaren kan ange endpoint/token, pulla, pusha, se status och koppla från.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-086",
+          "title": "Hantera molnkonflikt",
+          "valueIntent": "Undvika tyst överskrivning.",
+          "expectedBehavior": "Sync visar konflikt/error och stoppar automatisk write när revision inte matchar.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-087",
+          "title": "Responsiv huvudnavigation",
+          "valueIntent": "Vyer ska nås på desktop och mobil.",
+          "expectedBehavior": "Nav innehåller Översikt, Inköp, Statistik, Register, Data och Hjälp där relevant.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-088",
+          "title": "Visa hjälpvy",
+          "valueIntent": "Användaren ska förstå koncepten utan extern manual.",
+          "expectedBehavior": "Hjälp förklarar plånbok, återkommande utgifter, inköp, signaler, import och data.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-011",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-089",
+          "title": "Visa tydliga tomlägen",
+          "valueIntent": "Tomma listor ska guida nästa action.",
+          "expectedBehavior": "Tomma paneler visar kort hjälptext och relevant primär action.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-090",
+          "title": "Använda modaler för skapande/redigering",
+          "valueIntent": "Fokusera på uppgiften utan sidbyte.",
+          "expectedBehavior": "Utgift och köp öppnas i modal med stäng, avbryt och spara.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-091",
+          "title": "Använda drawer för detaljer",
+          "valueIntent": "Behålla översikten medan detaljer visas.",
+          "expectedBehavior": "Utgiftsdetalj öppnas som sidopanel med åtgärder.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-092",
+          "title": "Undvika överlappande text i mobil",
+          "valueIntent": "Appen ska kännas stabil och läsbar.",
+          "expectedBehavior": "Belopp, chips, kort och knappar bryter rad eller justeras så innehåll inte kolliderar.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-093",
+          "title": "Ha konsekvent signaldesign",
+          "valueIntent": "Användaren ska känna igen aktiva/inaktiva signaler.",
+          "expectedBehavior": "Samma signaler använder samma ikon, färgton och aktivt/inaktivt läge över appen.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-094",
+          "title": "Simulera bort återkommande utgift",
+          "valueIntent": "Prova besparingsscenario utan att ändra data.",
+          "expectedBehavior": "Användaren kan markera utgift som simulerat borttagen från första möjliga månad.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-095",
+          "title": "Visa simulerad vy tydligt",
+          "valueIntent": "Undvika att simulering misstas för verklighet.",
+          "expectedBehavior": "Statistik visar banner och återställ-knapp när simulering är aktiv.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-096",
+          "title": "Återställa simulering",
+          "valueIntent": "Komma tillbaka till originaldata.",
+          "expectedBehavior": "Alla simulerade borttagningar kan rensas i ett steg.",
+          "uxSketches": []
+        }
+      ]
+    },
+    {
+      "id": "EPC-012",
+      "title": "Fallback Epic",
+      "scopeBoundary": "Describe what this Epic includes, excludes, or leaves for later.",
+      "stories": [
+        {
+          "id": "US-097",
+          "title": "Slå på/av inköpsmodul",
+          "valueIntent": "Produkten ska kunna fokusera på kärnan.",
+          "expectedBehavior": "Data/inställning kan aktivera eller dölja inköpsvyn där state stödjer det.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-098",
+          "title": "Växla planflagga",
+          "valueIntent": "Testa premiumrelaterade ytor.",
+          "expectedBehavior": "Plånbok har free/premium som lokal flagga utan verklig betalvägg.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-099",
+          "title": "Visa lokal datarisk",
+          "valueIntent": "Användaren ska förstå backupansvar.",
+          "expectedBehavior": "Data-vyn förklarar lokal lagring, browser-risk och backup/export.",
+          "uxSketches": []
+        },
+        {
+          "id": "US-100",
+          "title": "Rensa lokal data",
+          "valueIntent": "Kunna börja om eller ta bort privat data.",
+          "expectedBehavior": "Reset rensar lokal state, datafilskoppling och cloud config efter explicit handling.",
+          "uxSketches": []
+        }
+      ]
+    }
+  ],
+  "initialImplementationSlice": [
+    "OUT-001",
+    "JNY-001",
+    "EP-001",
+    "US-001",
+    "US-002",
+    "US-003",
+    "US-004",
+    "US-007",
+    "US-008",
+    "US-015",
+    "US-016",
+    "US-017",
+    "US-020",
+    "US-022",
+    "US-026",
+    "US-029",
+    "US-030",
+    "US-031",
+    "US-032",
+    "US-064",
+    "US-076",
+    "US-087",
+    "US-089",
+    "US-090",
+    "US-091",
+    "US-092",
+    "US-099",
+    "TECH-001",
+    "DEC-001"
+  ]
+}

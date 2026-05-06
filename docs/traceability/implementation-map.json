@@ -1,0 +1,2761 @@
+{
+  "generatedAt": "2026-05-06T06:25:26.521Z",
+  "entries": [
+    {
+      "id": "OUT-001",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "index.html",
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "JNY-001",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "EP-001",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "src/storage.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-001",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-002",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-003",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-004",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-007",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-008",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-015",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-016",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-017",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-020",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-022",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-026",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-029",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-030",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-031",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-032",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-064",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-076",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/storage.js",
+        "src/app.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-087",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-089",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-090",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-091",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-092",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-099",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "TECH-001",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "package.json",
+        "index.html",
+        "src/domain.js",
+        "src/storage.js",
+        "src/app.js",
+        "src/styles.css",
+        "tests/domain.test.js",
+        "scripts/serve.mjs"
+      ],
+      "tests": [
+        "npm test",
+        "GET http://localhost:5173/ => 200"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "GET http://localhost:5173/ => 200",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-001",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "EP-002",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "EP-003",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "EP-004",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "EP-008",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "EP-010",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-012",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-014",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-002",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js",
+        "tests/storage.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-013",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-035",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-003",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-025",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-053",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-054",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-056",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-057",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-059",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-004",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-005",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-006",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-036",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-037",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-038",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-039",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-040",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-041",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/domain.js",
+        "src/app.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-005",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-043",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-044",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-049",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-050",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-052",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-063",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-006",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-065",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-066",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-067",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-068",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-069",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-070",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-071",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-072",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-074",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-075",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-007",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-077",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-079",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js",
+        "tests/storage.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-082",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js",
+        "tests/storage.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-084",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-008",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/storage.js",
+        "src/styles.css",
+        "tests/storage.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-045",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "src/mastercard-import.js",
+        "tests/domain.test.js",
+        "tests/mastercard-import.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-046",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-047",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-009",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-094",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-095",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-096",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-010",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-080",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js",
+        "tests/storage.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-011",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/storage.js",
+        "tests/storage.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-033",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-034",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-012",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-058",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-097",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-098",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-013",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-060",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-061",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-062",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-014",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-009",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-010",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-011",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-018",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-019",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-021",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-023",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-024",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-027",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-028",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-042",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-048",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-051",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-055",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-073",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-088",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-093",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/styles.css"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-100",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js"
+      ],
+      "tests": [],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-015",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/styles.css",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-078",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js",
+        "tests/storage.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-081",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js",
+        "tests/storage.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-083",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/storage.js",
+        "tests/storage.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-085",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "US-086",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "src/app.js",
+        "src/domain.js",
+        "tests/domain.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-016",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/storage.js",
+        "tests/domain.test.js",
+        "tests/storage.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    },
+    {
+      "id": "DEC-017",
+      "status": "implemented_first_slice",
+      "implementationArtifacts": [
+        "docs/traceability/decision-log.md",
+        "src/app.js",
+        "src/domain.js",
+        "src/mastercard-import.js",
+        "src/styles.css",
+        "tests/domain.test.js",
+        "tests/mastercard-import.test.js"
+      ],
+      "tests": [
+        "npm test"
+      ],
+      "documentation": [
+        "docs/traceability/requirements-baseline.md",
+        "docs/traceability/decision-log.md",
+        "docs/traceability/traceability-report.md"
+      ],
+      "knownDeviations": [],
+      "remainingGaps": [],
+      "evidence": [
+        "npm test",
+        "Dev server responded with HTTP 200"
+      ]
+    }
+  ]
+}

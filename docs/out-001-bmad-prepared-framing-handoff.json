@@ -1,0 +1,2175 @@
+{
+  "profile": "bmad_prepared",
+  "intent": "BMAD-prepared governed AI handoff",
+  "guidance": [
+    "Start from Outcome, Epics and Story Ideas before creating or refining Delivery Stories.",
+    "Preserve Outcome -> Epic -> Story Idea traceability and extend it forward into Delivery Stories and tests when later steps generate them.",
+    "Do not replace the Framing source of truth with generated delivery artifacts. Bring later delivery evidence back through the feedback loop instead.",
+    "Keep approval context, AI level, constraints, Journey Context and UX references attached through later BMAD steps."
+  ],
+  "source_of_truth": {
+    "kind": "framing_brief",
+    "version": 6,
+    "handshake": {
+      "outcome_key": "OUT-001",
+      "outcome_title": "Trygg kontroll över privata återkommande kostnader och enskilda köp",
+      "problem_statement": "Private users and households need a local-first way to understand recurring costs, one-off purchases, cancellation opportunities, and spending impact without account or bank connection.",
+      "outcome_statement": "En privatperson eller ett hushåll ska snabbt förstå vad som dras, vad som kan sägas upp, vad som köps enskilt och hur privatekonomin påverkas över tid, utan konto eller bankkoppling.",
+      "timeframe": "2026 Q2",
+      "value_owner": "Anne Hathaway",
+      "ai_level": "level_3",
+      "risk_profile": "low",
+      "solution_context": null,
+      "constraints": "## General constraints\nImported constraints\n- Data, Storage and Technical Constraints: ## 8. Data, Storage and Technical Constraints | Constraint ID | Constraint | Detail | Linked refs | | --- | --- | --- | --- | | CON-001 | Local-first | Appen ska fungera utan server, konto eller bankkoppling. Primär l...\n\n## UX principles\nUX direction\nUX profile: Enterprise control plane (enterprise-control-plane)\nTarget surface: Responsive web app (responsive-web)\nColor schema: Nordic blue (nordic-blue)\nStyle authority: AAS suggested style (aas-suggested-style)\n\nStyle priority:\nThe selected AAS UX direction is the primary source unless explicit customer UX rules are added in the additional instructions.\nIf customer UX rules are supplied, downstream AI must explicitly resolve conflicts using this style authority before applying AAS profile, color, or signature component guidance.\n\nCore UX guidance:\nPrioritize dashboard density, strong hierarchy, audit-ready status, table/list scanning, durable navigation, and clear ownership of decisions.\n\nDownstream AI visual grammar:\nThe selected UX profile must materially change layout, components, density, navigation, and status treatment. Do not collapse this into a generic SaaS card UI.\n- Use dense control-plane layouts with compact rectangular cards, tables, right rails, and persistent navigation.\n- Prefer squared or small-radius controls, clear borders, muted surfaces, and high information density.\n- Place owner, status, evidence, version, and governance action together so the decision context is never hidden.\n\nSignature components to prefer when relevant:\nUse these as primary building blocks before generic button/select/input examples. Generic controls should support the signature component, not define the experience.\n- Approval matrix for comparing owners, evidence, risk, and approval state.\n- Audit trail rail beside forms and review screens.\n- Readiness scorecard for tollgate, release, or portfolio decisions.\n\nSurface guidance:\nDesign from responsive web constraints with clear desktop density and a readable mobile layout for core review and input tasks.\n\nColor guidance:\nUse cool blues with clean neutrals, restrained accents, high contrast, and a calm professional tone.\n\nAdditional UX instructions:\nImported UX input\n- UX Specification: ## 6. UX Specification ### 6.1 UX Direction | UX ID | Attribute | Spec | Linked refs | | --- | --- | --- | --- | | UX-001 | UX profile | Private finance control plane: tät, lugn, handlingsorienterad och jämförbar. | O...",
+      "data_sensitivity": "Hög. Men hanteras med lokal fillagring",
+      "delivery_type": "AD",
+      "delivery_type_description": "Application Development: frame a new application, service or meaningful functional expansion. Keep focus on outcome, scope and why the capability should exist."
+    },
+    "baseline": {
+      "definition": "Product regeneration package dated 2026-05-05 defines the current product intent, trace IDs, journeys, UX rules, calculation rules, constraints, acceptance checklist, and known gaps.",
+      "source": "product-regeneration-package.md\r\nMeasurement Method: Användaren kan skapa en plånbok, registrera återkommande utgifter, importera eller lägga in enskilda köp, se tidslinje/statistik, markera signaler, exportera data och agera på uppsägningar eller besparingsmöjligheter.",
+      "warnings": [],
+      "readiness": "ready"
+    },
+    "ai_and_risk": {
+      "execution_pattern": "orchestrated",
+      "ai_usage_intent": "OK",
+      "ai_level": "level_3",
+      "risk_profile": "low",
+      "risk_rationale": {
+        "business_impact": "low: OK",
+        "data_sensitivity": "low: OK",
+        "blast_radius": "low: OK",
+        "decision_impact": "low: OK"
+      },
+      "level_3_justification": "OK"
+    },
+    "framing_structure": {
+      "epic_count": 24,
+      "story_idea_count": 100,
+      "epics": [
+        {
+          "key": "EP-001",
+          "title": "Plånbok, onboarding och dataseparering",
+          "scope_boundary": "Scope in: Inkluderar skapa, välja, duplicera och konfigurera plånbok samt första användare. Exkluderar kontobaserad multi-user-synk.",
+          "story_ideas": [
+            {
+              "key": "US-001",
+              "title": "Skapa första plånboken",
+              "value_intent": "Användaren ska snabbt komma från tom app till egen ekonomisk yta.",
+              "expected_behavior": "Onboarding låter användaren ange plånboksnamn, välja mall och skapa första kontexten.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-002",
+              "title": "Kräva minst en första användare",
+              "value_intent": "Statistik per betalare och nya utgifter ska fungera direkt.",
+              "expected_behavior": "När första plånboken skapas promptas användaren att lägga till minst en person/betalare.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-003",
+              "title": "Välja aktiv plånbok",
+              "value_intent": "Flera ekonomiska sammanhang ska kunna hållas isär.",
+              "expected_behavior": "Kontextväljaren byter aktiv plånbok och alla vyer filtreras till den.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-004",
+              "title": "Konfigurera tidsfönster",
+              "value_intent": "Användaren ska kunna styra hur långt bakåt/framtåt planeringen visas.",
+              "expected_behavior": "Plånbokens månader bakåt och framåt kan ändras och påverkar tidslinje/statistik.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EP-002",
+          "title": "Återkommande utgifter",
+          "scope_boundary": "Scope in: Inkluderar belopp, period, leverantör, kategori, betalare, datum, status, signaler och anteckningar. Exkluderar fakturaskanning som automatisk källa.",
+          "story_ideas": []
+        },
+        {
+          "key": "EP-003",
+          "title": "Tidslinje och översikt",
+          "scope_boundary": "Scope in: Inkluderar desktop-tidslinje, mobilöversikt, filter, sök, totals och snabblänkar. Exkluderar avancerad kalenderplanering.",
+          "story_ideas": []
+        },
+        {
+          "key": "EP-004",
+          "title": "Uppsägning, låsning och påminnelser",
+          "scope_boundary": "Scope in: Inkluderar uppsägningstid, låst period, tidigaste fria månad, avslut, påminnelse och kalenderexport. Exkluderar automatisk uppsägning hos leverantör.",
+          "story_ideas": []
+        },
+        {
+          "key": "EP-005",
+          "title": "Register och återanvändbar metadata",
+          "scope_boundary": "Scope in: Inkluderar personer, leverantörer, kategorier, färg/ikon, kontaktinfo och kategoriregler. Exkluderar full CRM eller dokumentarkiv.",
+          "story_ideas": []
+        },
+        {
+          "key": "EP-006",
+          "title": "Enskilda köp och kontoutdragsimport",
+          "scope_boundary": "Scope in: Inkluderar manuella köp, import från CSV/XLSX/PDF, importförhandsgranskning, deduplicering, kategorisering och köpdetalj. Exkluderar direkt bankintegration.",
+          "story_ideas": [
+            {
+              "key": "US-043",
+              "title": "Skapa enskilt köp manuellt",
+              "value_intent": "Fånga konsumtion som inte är återkommande.",
+              "expected_behavior": "Formulär sparar datum, bokfört datum, handlare, belopp, kategori, betalare, typ, flaggor och anteckning.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-044",
+              "title": "Redigera enskilt köp",
+              "value_intent": "Korrigera importerade eller manuella köp.",
+              "expected_behavior": "Köpmodalen kan ändra fält och spara utan att tappa import/koppling.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-045",
+              "title": "Importera kontoutdrag",
+              "value_intent": "Snabbt få in många köp.",
+              "expected_behavior": "CSV, XLSX och PDF kan läsas och omvandlas till köptransaktioner.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EP-007",
+          "title": "Signaler, klassning och konvertering",
+          "scope_boundary": "Scope in: Inkluderar Granska, Onödigt, Återkommande, Värt det, Business, namnbyte av business-signal, köp -> återkommande och återkommande -> köp.",
+          "story_ideas": [
+            {
+              "key": "US-054",
+              "title": "Markera Onödigt",
+              "value_intent": "Synliggöra konsumtion att lära av.",
+              "expected_behavior": "Köp/utgift kan signaleras som onödigt och räknas i signalstatistik.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EP-008",
+          "title": "Statistik och beslutsstöd",
+          "scope_boundary": "Scope in: Inkluderar återkommande analys, köpstatistik, köpradar, budgetutfall, kategori/person/leverantör, topphandlare och periodtrender.",
+          "story_ideas": []
+        },
+        {
+          "key": "EP-009",
+          "title": "Dataexport, backup, datafil och sync",
+          "scope_boundary": "Scope in: Inkluderar localStorage, JSON/ZIP/CSV/PDF/ICS, datafil, delningsfil, import som ny plånbok och experimentell molnsync via egen endpoint. Exkluderar hosted backend som krav.",
+          "story_ideas": []
+        },
+        {
+          "key": "EP-010",
+          "title": "Responsiv UX, hjälp och tomlägen",
+          "scope_boundary": "Scope in: Inkluderar navigering, modaler, drawer, tomlägen, hjälpvy, mobilanpassade kort och primära actions. Exkluderar marketing-landningssida.",
+          "story_ideas": []
+        },
+        {
+          "key": "EP-011",
+          "title": "Simulering och scenarioanalys",
+          "scope_boundary": "Scope in: Inkluderar simulera bort återkommande utgift, simulerad statistik och återställning. Exkluderar flerårig forecasting med osäkerhetsmodell.",
+          "story_ideas": []
+        },
+        {
+          "key": "EP-012",
+          "title": "Produktadministration och planflaggor",
+          "scope_boundary": "Scope in: Inkluderar Data-vy, lokal varning, premium/free-flagga, köp på/av och namn på business-signal. Exkluderar riktig betalvägg.",
+          "story_ideas": []
+        },
+        {
+          "key": "EPC-001",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-005",
+              "title": "Duplicera plånbok som mall",
+              "value_intent": "Återanvända struktur utan att bygga om register.",
+              "expected_behavior": "Appen kan skapa en ny plånbok med kopierad struktur enligt befintlig mall.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-006",
+              "title": "Radera plånbok säkert",
+              "value_intent": "Ta bort fel eller testdata utan att lämna relationer kvar.",
+              "expected_behavior": "Radering tar bort relaterade personer, leverantörer, kategorier, utgifter, köp, filer, regler och filterreferenser.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-007",
+              "title": "Visa tomt startläge",
+              "value_intent": "En ny användare ska förstå nästa steg.",
+              "expected_behavior": "Tom app visar tydlig startyta för ny plånbok eller demo/skip utan döda ytor.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-008",
+              "title": "Skapa återkommande månadsutgift",
+              "value_intent": "Registrera vanligaste kostnadstypen.",
+              "expected_behavior": "Formulär sparar namn, belopp, månad, dragningsdag, period, kategori, betalare och leverantör.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-009",
+              "title": "Skapa kvartals- och årsutgift",
+              "value_intent": "Återkommande kostnader med annan periodicitet ska periodiseras rätt.",
+              "expected_behavior": "Val av kvartal/år påverkar periodiserad statistik och kassaflöde korrekt.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-010",
+              "title": "Skapa engångsperiod",
+              "value_intent": "Planerade engångskostnader ska kunna synas i rätt månad.",
+              "expected_behavior": "Periodtypen engång ger belopp i aktuell period utan att återkomma.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-011",
+              "title": "Spara ofullständig utgift som utkast",
+              "value_intent": "Användaren ska kunna fånga något snabbt utan komplett data.",
+              "expected_behavior": "Saknas centrala fält sparas status draft och raden kan kompletteras senare.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-012",
+              "title": "Redigera återkommande utgift",
+              "value_intent": "Felaktiga eller ändrade kostnader ska kunna korrigeras.",
+              "expected_behavior": "Redigering uppdaterar utgift och period utan att skapa dubbletter.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-002",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-013",
+              "title": "Avsluta återkommande utgift",
+              "value_intent": "Avslutade kostnader ska sluta påverka framtid men finnas i historik.",
+              "expected_behavior": "Avslut sätter slutdatum/status och tidslinjen slutar räkna framtida månader.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-014",
+              "title": "Ta bort återkommande utgift",
+              "value_intent": "Test eller felregistrering ska kunna rensas.",
+              "expected_behavior": "Borttagning tar bort utgift och relaterade perioder samt kopplar loss eventuella köp.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-015",
+              "title": "Välja betalande person",
+              "value_intent": "Fördelning per person ska vara möjlig.",
+              "expected_behavior": "Utgift kan kopplas till person och synas i personsummeringar/filter.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-016",
+              "title": "Välja kategori",
+              "value_intent": "Kostnadsmix ska bli begriplig.",
+              "expected_behavior": "Utgift kan kopplas till kategori med färg/ikon och räknas i kategoriöversikter.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-017",
+              "title": "Välja eller skapa leverantör i flödet",
+              "value_intent": "Registrering ska gå fort utan att lämna formuläret.",
+              "expected_behavior": "Användaren kan välja befintlig leverantör eller skapa ny leverantör från utgiftsformuläret.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-018",
+              "title": "Ange anteckning",
+              "value_intent": "Praktisk kontext ska kunna sparas utan separat dokument.",
+              "expected_behavior": "Anteckning lagras på utgift och visas i detalj.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-019",
+              "title": "Bifoga underlag på utgift",
+              "value_intent": "Kvitto, avtal eller faktura ska kunna hållas nära posten.",
+              "expected_behavior": "Tillåtna filtyper kan bifogas och visas i utgiftsdetaljen.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-020",
+              "title": "Visa återkommande tidslinje",
+              "value_intent": "Användaren ska se vilka månader varje utgift påverkar.",
+              "expected_behavior": "Desktop visar utgifter som rader och månader som kolumner med belopp/aktivitet.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-003",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-021",
+              "title": "Visa mobil översikt",
+              "value_intent": "Mobilanvändaren ska kunna läsa samma data utan tabellkaos.",
+              "expected_behavior": "Mobilvy visar kompakta kort, månadsrader och expanderbara detaljer.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-022",
+              "title": "Visa månadstotaler",
+              "value_intent": "Användaren ska förstå total belastning per månad.",
+              "expected_behavior": "Månadsrubriker eller sammanfattningar visar totals för vald period.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-023",
+              "title": "Filtrera på kategori",
+              "value_intent": "Fokusera på en del av ekonomin.",
+              "expected_behavior": "Kategorifilter påverkar tidslinje, översikt och relevanta summeringar.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-024",
+              "title": "Filtrera på betalare",
+              "value_intent": "Se vem som bär vilka kostnader.",
+              "expected_behavior": "Betalarfilter visar endast matchande utgifter/köp där relevant.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-025",
+              "title": "Filtrera på signal",
+              "value_intent": "Användaren ska kunna se exempelvis Onödigt eller Business.",
+              "expected_behavior": "Signalfilter påverkar köp/översikt och släcks visuellt när det avmarkeras.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-026",
+              "title": "Söka i utgifter och köp",
+              "value_intent": "Hitta poster snabbt.",
+              "expected_behavior": "Sök matchar namn, leverantör, handlare, kategori och relaterad text.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-027",
+              "title": "Dölja historiska månader",
+              "value_intent": "Minska visuell belastning när fokus är framåt.",
+              "expected_behavior": "Toggle tar bort tidigare månader från tidslinjens fokus.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-028",
+              "title": "Öppna detaljdrawer från tidslinje",
+              "value_intent": "Snabbt gå från översikt till åtgärd.",
+              "expected_behavior": "Klick på rad/cell öppnar detalj med redigera, avsluta, ta bort och filhantering.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-004",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-029",
+              "title": "Snabbregistrera från global action",
+              "value_intent": "Ny data ska vara nära till hands oavsett vy.",
+              "expected_behavior": "Quick action erbjuder återkommande utgift, enskilt köp och import.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-030",
+              "title": "Ange uppsägningstid",
+              "value_intent": "Förstå när bindning/uppsägning påverkar ekonomin.",
+              "expected_behavior": "Utgift kan ha uppsägningstid i dagar eller månader.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-031",
+              "title": "Beräkna tidigaste kostnadsfria månad",
+              "value_intent": "Visa realistisk effekt av uppsägning.",
+              "expected_behavior": "Appen beräknar första månad utan kostnad baserat på dagens datum och uppsägningstid.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-032",
+              "title": "Visa låst period",
+              "value_intent": "Undvika falsk besparingssignal.",
+              "expected_behavior": "Månader som inte kan frigöras än markeras låsta.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-064",
+              "title": "Visa återkommande analys",
+              "value_intent": "Förstå planerad kostnadsbas.",
+              "expected_behavior": "Statistik visar periodiserad period, månadssnitt, årstakt och signalmix.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-033",
+              "title": "Skapa uppsägningspåminnelse",
+              "value_intent": "Minska risken att missa deadline.",
+              "expected_behavior": "Relevant påminnelse skapas kopplat till utgift och kan markeras klar.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-034",
+              "title": "Exportera påminnelser till kalender",
+              "value_intent": "Ta med åtgärder utanför appen.",
+              "expected_behavior": "Appen kan exportera .ics för påminnelser.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-035",
+              "title": "Visa saknad uppsägningsinformation",
+              "value_intent": "Synliggöra svag data.",
+              "expected_behavior": "Poster utan uppsägningsdata eller instruktion kan flaggas som förbättringskandidater.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-005",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-036",
+              "title": "Skapa och redigera person",
+              "value_intent": "Stödja hushåll och betalare.",
+              "expected_behavior": "Register låter användaren skapa, ändra och inaktivera personer.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-037",
+              "title": "Ange månadsbudget per person",
+              "value_intent": "Möjliggöra budgetutfall.",
+              "expected_behavior": "Person kan ha disponibel månadsinkomst/budget som används i statistik.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-038",
+              "title": "Skapa och redigera leverantör",
+              "value_intent": "Återanvänd företagsdata.",
+              "expected_behavior": "Register hanterar namn, typ, ikon, färg, kontaktinfo och notes.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-039",
+              "title": "Spara uppsägningsinstruktion för leverantör",
+              "value_intent": "Göra faktisk uppsägning enklare.",
+              "expected_behavior": "Leverantör kan bära instruktion som visas vid relevant utgift.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-040",
+              "title": "Skapa och redigera kategori",
+              "value_intent": "Hålla analysen begriplig.",
+              "expected_behavior": "Kategori har namn, ikon och färg och används i utgifter/köp.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-041",
+              "title": "Skapa standardregister i ny plånbok",
+              "value_intent": "Ge bra startdata.",
+              "expected_behavior": "Ny state berikas med vanliga leverantörer och standardkategorier utan att radera användardata.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-042",
+              "title": "Skapa handlare/kategoriregel",
+              "value_intent": "Importerade köp ska kunna föreslås rätt framåt.",
+              "expected_behavior": "Appen sparar mönster för handlare och kan återanvända kategori/leverantör.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-046",
+              "title": "Förhandsgranska import",
+              "value_intent": "Undvika att fel rader skrivs in.",
+              "expected_behavior": "Appen visar antal köp, totalsumma, ignorerade rader och radlista före importcommit.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-006",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-047",
+              "title": "Deduplicera importerade köp",
+              "value_intent": "Förhindra dubbla transaktioner.",
+              "expected_behavior": "Fingerprint på datum, bokfört datum, belopp och handlare används för att hoppa över dubbletter.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-048",
+              "title": "Högerjustera belopp i import på mobil",
+              "value_intent": "Belopp ska inte skrivas över av handlarnamn.",
+              "expected_behavior": "Mobil importlista lägger belopp på egen/högerjusterad yta utan överlapp.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-049",
+              "title": "Koppla köp till betalare",
+              "value_intent": "Konsumtion ska kunna summeras per person.",
+              "expected_behavior": "Importerade/manuella köp får defaultbetalare och kan ändras.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-050",
+              "title": "Koppla köp till leverantör",
+              "value_intent": "Enskilt köp kan höra ihop med sparad leverantör.",
+              "expected_behavior": "Köp kan välja leverantör eller föreslå ny leverantör från handlare.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-051",
+              "title": "Uppdatera kategori för samma handlare",
+              "value_intent": "Masskorrigera importfriktion.",
+              "expected_behavior": "Vid köpredigering kan användaren applicera kategori på alla köp från samma handlare utan tung boxad UI.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-052",
+              "title": "Lista och filtrera köp",
+              "value_intent": "Hantera inköpshistorik.",
+              "expected_behavior": "Inköpsvyn visar köpradar, sök, lista, signaler och redigering.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-053",
+              "title": "Markera Granska",
+              "value_intent": "Skapa arbetskö för okända köp.",
+              "expected_behavior": "Köp kan flaggas för granskning och visas i köpradar/filter.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-055",
+              "title": "Markera Återkommande signal",
+              "value_intent": "Identifiera köp som sannolikt bör bli återkommande utgift.",
+              "expected_behavior": "Köp kan flaggas återkommande och visas med samma signalmönster som andra signaler.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-007",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-056",
+              "title": "Markera Värt det",
+              "value_intent": "Skilja bra värde från läckor.",
+              "expected_behavior": "Värt det-signal kan sättas/släckas och summeras separat.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-057",
+              "title": "Markera Business",
+              "value_intent": "Separera jobb/utlägg från privat konsumtion.",
+              "expected_behavior": "Business-signal kan sättas/släckas och påverka filter/statistik.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-058",
+              "title": "Byta namn på Business-signal",
+              "value_intent": "Anpassa termen till användarens vardag.",
+              "expected_behavior": "Data-vyn låter användaren namnge business-signalen exempelvis Utlägg.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-059",
+              "title": "Släcka signal visuellt när samma signal klickas igen",
+              "value_intent": "Undvika mobilförvirring.",
+              "expected_behavior": "Samma signal/tile togglar av och ser inte längre aktiv ut.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-060",
+              "title": "Konvertera köp till återkommande utgift",
+              "value_intent": "Göra upptäckt mönster till prognos.",
+              "expected_behavior": "Ett köp kan skapa ny återkommande utgift med köpets datum som första betalningsdatum och köpets data förifylld.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-061",
+              "title": "Koppla originalköp som första betalning",
+              "value_intent": "Undvika dubbelräkning och behålla historik.",
+              "expected_behavior": "När köp konverteras länkas originalköpet till den nya återkommande utgiften.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-062",
+              "title": "Konvertera återkommande utgift till enskilt köp",
+              "value_intent": "Backa fel modellering.",
+              "expected_behavior": "En återkommande utgift kan göras om till enskilt köp och eventuella länkade köp kopplas loss.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-063",
+              "title": "Välja transaktionstyp",
+              "value_intent": "Skilja one-off, återkommande betalning, transfer och ignorerad rad.",
+              "expected_behavior": "Köp har typfält och statistik/import filtrerar bort ignorerade rader.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-008",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-065",
+              "title": "Visa kategori- och leverantörstoppar för återkommande",
+              "value_intent": "Prioritera stora återkommande poster.",
+              "expected_behavior": "Kategorier och leverantörer rankas på total periodkostnad och visar månads-/årstakt.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-066",
+              "title": "Visa återkommande vs köp",
+              "value_intent": "Jämföra åtaganden och faktisk konsumtion.",
+              "expected_behavior": "Statistik visar periodtotal för återkommande och enskilda köp sida vid sida.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-067",
+              "title": "Rankar handlare efter mest pengar",
+              "value_intent": "Stora engångsköp ska inte döljas av frekventa småköp.",
+              "expected_behavior": "Mest pengar sorterar strikt på totalbelopp över vald period.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-068",
+              "title": "Rankar handlare efter flest transaktioner",
+              "value_intent": "Identifiera vanor och frekvens.",
+              "expected_behavior": "Flest transaktioner sorterar på antal, med total som tie-breaker.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-069",
+              "title": "Rankar kategorier efter mest pengar och antal",
+              "value_intent": "Förstå konsumtionsmix både i pengar och aktivitet.",
+              "expected_behavior": "Kategorilistor sorterar separat efter totalbelopp respektive antal.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-070",
+              "title": "Visa köpintelligens",
+              "value_intent": "Ge snabb helhetsbild för köp.",
+              "expected_behavior": "KPI:er visar total köpvolym, transaktioner, medelköp och antal handlare.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-071",
+              "title": "Visa handlare efter påverkan",
+              "value_intent": "Hitta handlare som driver total, trend och snitt.",
+              "expected_behavior": "Handlarlista visar total, antal, aktiva månader, snitt och trend/sparkline.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-072",
+              "title": "Visa köp per månad och år",
+              "value_intent": "Förstå periodmönster.",
+              "expected_behavior": "Periodsammanfattningar visar total, snitt och topphandlare per månad/år.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-009",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-073",
+              "title": "Visa köpradar",
+              "value_intent": "Ge signalbaserad arbetsyta i inköpsvyn.",
+              "expected_behavior": "Köpradar visar Granska, Onödigt, Återkommande, Värt det och Business/Utlägg med antal eller belopp.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-074",
+              "title": "Visa budgetutfall",
+              "value_intent": "Visa om disponibel budget räcker.",
+              "expected_behavior": "Statistik jämför budgetbidrag mot återkommande + köp och visar utfall per månad.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-075",
+              "title": "Visa beslutsinsikter",
+              "value_intent": "Peka ut nästa rimliga åtgärd.",
+              "expected_behavior": "Panel visar prioriterade insikter kring leverantör, dragningsdag, köp, toppmånad eller uppsägningskandidat.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-076",
+              "title": "Spara lokalt utan konto",
+              "value_intent": "Sänka tröskel och skydda integritet.",
+              "expected_behavior": "Appen fungerar lokalt med localStorage och kräver ingen inloggning.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-077",
+              "title": "Exportera JSON",
+              "value_intent": "Göra komplett plånbok portabel.",
+              "expected_behavior": "Export innehåller kontext, register, utgifter, perioder, filer, köp och regler.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-078",
+              "title": "Exportera ZIP med filer",
+              "value_intent": "Säkerhetskopiera både data och bilagor.",
+              "expected_behavior": "ZIP innehåller context.json och bifogade filer.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-079",
+              "title": "Importera som ny plånbok",
+              "value_intent": "Undvika ID-krock och datatapp.",
+              "expected_behavior": "Import remappar ID:n och skapar ny kontext bredvid befintlig data.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-080",
+              "title": "Exportera CSV",
+              "value_intent": "Analysera utanför appen.",
+              "expected_behavior": "CSV innehåller återkommande utgifter och köp med relevanta kolumner.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-010",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-081",
+              "title": "Exportera PDF-rapport",
+              "value_intent": "Dela läsbar sammanfattning.",
+              "expected_behavior": "PDF genereras med plånbok, totals och rapportmetadata.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-082",
+              "title": "Skapa fristående datafil",
+              "value_intent": "Minska risk med bara browser-cache.",
+              "expected_behavior": "Användaren kan spara en JSON-datafil via File System Access API där det stöds.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-083",
+              "title": "Återansluta datafil",
+              "value_intent": "Fortsätta från samma lokala fil.",
+              "expected_behavior": "Appen kan öppna tidigare datafil och autospara efter ändringar när rättighet finns.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-084",
+              "title": "Dela datafil/handoff",
+              "value_intent": "Flytta data mellan enheter eller miljöer.",
+              "expected_behavior": "Appen kan skapa delningsbar fil/HTML-handoff som kan läsas tillbaka.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-085",
+              "title": "Konfigurera experimentell molnsync",
+              "value_intent": "Frivillig egen synk mellan enheter.",
+              "expected_behavior": "Användaren kan ange endpoint/token, pulla, pusha, se status och koppla från.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-086",
+              "title": "Hantera molnkonflikt",
+              "value_intent": "Undvika tyst överskrivning.",
+              "expected_behavior": "Sync visar konflikt/error och stoppar automatisk write när revision inte matchar.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-087",
+              "title": "Responsiv huvudnavigation",
+              "value_intent": "Vyer ska nås på desktop och mobil.",
+              "expected_behavior": "Nav innehåller Översikt, Inköp, Statistik, Register, Data och Hjälp där relevant.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-088",
+              "title": "Visa hjälpvy",
+              "value_intent": "Användaren ska förstå koncepten utan extern manual.",
+              "expected_behavior": "Hjälp förklarar plånbok, återkommande utgifter, inköp, signaler, import och data.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-011",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-089",
+              "title": "Visa tydliga tomlägen",
+              "value_intent": "Tomma listor ska guida nästa action.",
+              "expected_behavior": "Tomma paneler visar kort hjälptext och relevant primär action.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-090",
+              "title": "Använda modaler för skapande/redigering",
+              "value_intent": "Fokusera på uppgiften utan sidbyte.",
+              "expected_behavior": "Utgift och köp öppnas i modal med stäng, avbryt och spara.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-091",
+              "title": "Använda drawer för detaljer",
+              "value_intent": "Behålla översikten medan detaljer visas.",
+              "expected_behavior": "Utgiftsdetalj öppnas som sidopanel med åtgärder.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-092",
+              "title": "Undvika överlappande text i mobil",
+              "value_intent": "Appen ska kännas stabil och läsbar.",
+              "expected_behavior": "Belopp, chips, kort och knappar bryter rad eller justeras så innehåll inte kolliderar.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-093",
+              "title": "Ha konsekvent signaldesign",
+              "value_intent": "Användaren ska känna igen aktiva/inaktiva signaler.",
+              "expected_behavior": "Samma signaler använder samma ikon, färgton och aktivt/inaktivt läge över appen.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-094",
+              "title": "Simulera bort återkommande utgift",
+              "value_intent": "Prova besparingsscenario utan att ändra data.",
+              "expected_behavior": "Användaren kan markera utgift som simulerat borttagen från första möjliga månad.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-095",
+              "title": "Visa simulerad vy tydligt",
+              "value_intent": "Undvika att simulering misstas för verklighet.",
+              "expected_behavior": "Statistik visar banner och återställ-knapp när simulering är aktiv.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-096",
+              "title": "Återställa simulering",
+              "value_intent": "Komma tillbaka till originaldata.",
+              "expected_behavior": "Alla simulerade borttagningar kan rensas i ett steg.",
+              "ux_sketches": []
+            }
+          ]
+        },
+        {
+          "key": "EPC-012",
+          "title": "Fallback Epic",
+          "scope_boundary": "Describe what this Epic includes, excludes, or leaves for later.",
+          "story_ideas": [
+            {
+              "key": "US-097",
+              "title": "Slå på/av inköpsmodul",
+              "value_intent": "Produkten ska kunna fokusera på kärnan.",
+              "expected_behavior": "Data/inställning kan aktivera eller dölja inköpsvyn där state stödjer det.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-098",
+              "title": "Växla planflagga",
+              "value_intent": "Testa premiumrelaterade ytor.",
+              "expected_behavior": "Plånbok har free/premium som lokal flagga utan verklig betalvägg.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-099",
+              "title": "Visa lokal datarisk",
+              "value_intent": "Användaren ska förstå backupansvar.",
+              "expected_behavior": "Data-vyn förklarar lokal lagring, browser-risk och backup/export.",
+              "ux_sketches": []
+            },
+            {
+              "key": "US-100",
+              "title": "Rensa lokal data",
+              "value_intent": "Kunna börja om eller ta bort privat data.",
+              "expected_behavior": "Reset rensar lokal state, datafilskoppling och cloud config efter explicit handling.",
+              "ux_sketches": []
+            }
+          ]
+        }
+      ],
+      "unassigned_story_ideas": []
+    },
+    "journey_contexts": [
+      {
+        "id": "jc-product-regeneration",
+        "outcome_id": "ac8aef2d-735e-4090-8752-ad3cb959c30d",
+        "initiative_type": "AD",
+        "title": "Mina Utgifter - product regeneration journeys",
+        "description": "User journeys imported from product-regeneration-package.md.",
+        "notes": "Generated deterministically from JNY- sections in the product regeneration package.",
+        "journeys": [
+          {
+            "id": "JNY-001",
+            "title": "Skapa första kontrollbilden",
+            "type": "user",
+            "primary_actor": "Ny privat användare",
+            "supporting_actors": [],
+            "goal": "Komma från tom app till en första begriplig vy över återkommande kostnader.",
+            "trigger": "Användaren öppnar appen första gången eller efter rensad data.",
+            "narrative": "Efter första minuten finns en sparad plånbok, minst en betalare, minst en kostnad och en synlig tidslinje som visar ekonomisk påverkan.",
+            "value_moment": "Efter första minuten finns en sparad plånbok, minst en betalare, minst en kostnad och en synlig tidslinje som visar ekonomisk påverkan.",
+            "success_signals": [
+              "Efter första minuten finns en sparad plånbok, minst en betalare, minst en kostnad och en synlig tidslinje som visar ekonomisk påverkan."
+            ],
+            "current_state": null,
+            "desired_future_state": "Efter första minuten finns en sparad plånbok, minst en betalare, minst en kostnad och en synlig tidslinje som visar ekonomisk påverkan.",
+            "pain_points": [],
+            "desired_support": [
+              "Efter första minuten finns en sparad plånbok, minst en betalare, minst en kostnad och en synlig tidslinje som visar ekonomisk påverkan."
+            ],
+            "exceptions": [],
+            "notes": "Source refs: EP-001, EP-002, EP-003; US-001, US-002, US-008, US-015, US-016, US-020, US-022",
+            "linked_epic_ids": [
+              "EP-001",
+              "EP-002",
+              "EP-003"
+            ],
+            "linked_story_idea_ids": [
+              "US-001",
+              "US-002",
+              "US-008",
+              "US-015",
+              "US-016",
+              "US-020",
+              "US-022"
+            ],
+            "linked_figma_refs": [],
+            "steps": [
+              {
+                "id": "JNY-001-STEP-01",
+                "title": "Användaren skapar plånbok och lägger till minst en person.",
+                "actor": null,
+                "description": "Användaren skapar plånbok och lägger till minst en person.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-001-STEP-02",
+                "title": "Användaren väljer mall eller standardstruktur.",
+                "actor": null,
+                "description": "Användaren väljer mall eller standardstruktur.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-001-STEP-03",
+                "title": "Användaren lägger in första återkommande utgift med belopp och period.",
+                "actor": null,
+                "description": "Användaren lägger in första återkommande utgift med belopp och period.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-001-STEP-04",
+                "title": "Appen visar tidslinje, månadstotal och utgiftsrad.",
+                "actor": null,
+                "description": "Appen visar tidslinje, månadstotal och utgiftsrad.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-001-STEP-05",
+                "title": "Användaren öppnar detalj och ser att posten kan redigeras eller kompl...",
+                "actor": null,
+                "description": "Användaren öppnar detalj och ser att posten kan redigeras eller kompletteras.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              }
+            ],
+            "coverage": {
+              "status": "unanalysed",
+              "suggested_epic_ids": [],
+              "suggested_story_idea_ids": [],
+              "suggested_new_story_ideas": [],
+              "notes": null
+            }
+          },
+          {
+            "id": "JNY-002",
+            "title": "Hitta uppsägningsmöjlighet",
+            "type": "user",
+            "primary_actor": "Användare med flera abonnemang",
+            "supporting_actors": [],
+            "goal": "Förstå när en kostnad kan tas bort och få minnesstöd.",
+            "trigger": "Användaren vill minska månadskostnad.",
+            "narrative": "Appen visar realistisk frigörelsetid, inte bara dagens belopp, och gör åtgärden minnesbar.",
+            "value_moment": "Appen visar realistisk frigörelsetid, inte bara dagens belopp, och gör åtgärden minnesbar.",
+            "success_signals": [
+              "Appen visar realistisk frigörelsetid, inte bara dagens belopp, och gör åtgärden minnesbar."
+            ],
+            "current_state": null,
+            "desired_future_state": "Appen visar realistisk frigörelsetid, inte bara dagens belopp, och gör åtgärden minnesbar.",
+            "pain_points": [],
+            "desired_support": [
+              "Appen visar realistisk frigörelsetid, inte bara dagens belopp, och gör åtgärden minnesbar."
+            ],
+            "exceptions": [],
+            "notes": "Source refs: EP-004, EP-008, EP-011; US-030, US-031, US-032, US-033, US-034, US-075, US-094",
+            "linked_epic_ids": [
+              "EP-004",
+              "EP-008",
+              "EP-011"
+            ],
+            "linked_story_idea_ids": [
+              "US-030",
+              "US-031",
+              "US-032",
+              "US-033",
+              "US-034",
+              "US-075",
+              "US-094"
+            ],
+            "linked_figma_refs": [],
+            "steps": [
+              {
+                "id": "JNY-002-STEP-01",
+                "title": "Användaren öppnar statistik eller tidslinje och identifierar en påver...",
+                "actor": null,
+                "description": "Användaren öppnar statistik eller tidslinje och identifierar en påverkbar kostnad.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-002-STEP-02",
+                "title": "Användaren öppnar detaljen och anger eller kontrollerar uppsägningstid.",
+                "actor": null,
+                "description": "Användaren öppnar detaljen och anger eller kontrollerar uppsägningstid.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-002-STEP-03",
+                "title": "Appen visar låst period och tidigaste fria månad.",
+                "actor": null,
+                "description": "Appen visar låst period och tidigaste fria månad.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-002-STEP-04",
+                "title": "Användaren skapar/behåller påminnelse och exporterar kalenderfil vid ...",
+                "actor": null,
+                "description": "Användaren skapar/behåller påminnelse och exporterar kalenderfil vid behov.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-002-STEP-05",
+                "title": "Användaren kan simulera bort kostnaden och se effekt utan att spara a...",
+                "actor": null,
+                "description": "Användaren kan simulera bort kostnaden och se effekt utan att spara avslut.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              }
+            ],
+            "coverage": {
+              "status": "unanalysed",
+              "suggested_epic_ids": [],
+              "suggested_story_idea_ids": [],
+              "suggested_new_story_ideas": [],
+              "notes": null
+            }
+          },
+          {
+            "id": "JNY-003",
+            "title": "Importera och rensa köp",
+            "type": "user",
+            "primary_actor": "Användare med kontoutdrag",
+            "supporting_actors": [],
+            "goal": "Få in faktisk konsumtion och sortera bort sådant som inte behöver granskas.",
+            "trigger": "Användaren har en CSV, XLSX eller PDF från kort/konto.",
+            "narrative": "Import känns kontrollerad; ingen rad skrivs in utan förhandsgranskning och mobilen visar belopp läsbart.",
+            "value_moment": "Import känns kontrollerad; ingen rad skrivs in utan förhandsgranskning och mobilen visar belopp läsbart.",
+            "success_signals": [
+              "Import känns kontrollerad; ingen rad skrivs in utan förhandsgranskning och mobilen visar belopp läsbart."
+            ],
+            "current_state": null,
+            "desired_future_state": "Import känns kontrollerad; ingen rad skrivs in utan förhandsgranskning och mobilen visar belopp läsbart.",
+            "pain_points": [],
+            "desired_support": [
+              "Import känns kontrollerad; ingen rad skrivs in utan förhandsgranskning och mobilen visar belopp läsbart."
+            ],
+            "exceptions": [],
+            "notes": "Source refs: EP-006, EP-007, EP-008, EP-010; US-045, US-046, US-047, US-048, US-052, US-053, US-054, US-056, US-057, US-073",
+            "linked_epic_ids": [
+              "EP-006",
+              "EP-007",
+              "EP-008",
+              "EP-010"
+            ],
+            "linked_story_idea_ids": [
+              "US-045",
+              "US-046",
+              "US-047",
+              "US-048",
+              "US-052",
+              "US-053",
+              "US-054",
+              "US-056",
+              "US-057",
+              "US-073"
+            ],
+            "linked_figma_refs": [],
+            "steps": [
+              {
+                "id": "JNY-003-STEP-01",
+                "title": "Användaren väljer importera kontoutdrag.",
+                "actor": null,
+                "description": "Användaren väljer importera kontoutdrag.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-003-STEP-02",
+                "title": "Appen tolkar filen och visar importförhandsgranskning.",
+                "actor": null,
+                "description": "Appen tolkar filen och visar importförhandsgranskning.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-003-STEP-03",
+                "title": "Användaren kontrollerar antal, totalsumma och enskilda rader.",
+                "actor": null,
+                "description": "Användaren kontrollerar antal, totalsumma och enskilda rader.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-003-STEP-04",
+                "title": "Användaren importerar och går till Inköp.",
+                "actor": null,
+                "description": "Användaren importerar och går till Inköp.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-003-STEP-05",
+                "title": "Användaren använder köpradar och signaler för att granska, markera on...",
+                "actor": null,
+                "description": "Användaren använder köpradar och signaler för att granska, markera onödigt, värt det eller business.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              }
+            ],
+            "coverage": {
+              "status": "unanalysed",
+              "suggested_epic_ids": [],
+              "suggested_story_idea_ids": [],
+              "suggested_new_story_ideas": [],
+              "notes": null
+            }
+          },
+          {
+            "id": "JNY-004",
+            "title": "Skapa återkommande från köp",
+            "type": "user",
+            "primary_actor": "Användare som upptäcker abonnemang i kontoutdrag",
+            "supporting_actors": [],
+            "goal": "Flytta ett återkommande mönster från historiskt köp till framtidsprognos.",
+            "trigger": "Ett köp markeras som Återkommande eller känns som abonnemang.",
+            "narrative": "Användaren slipper dubbelinmatning och får både historik och prognos utan dubbelräkning.",
+            "value_moment": "Användaren slipper dubbelinmatning och får både historik och prognos utan dubbelräkning.",
+            "success_signals": [
+              "Användaren slipper dubbelinmatning och får både historik och prognos utan dubbelräkning."
+            ],
+            "current_state": null,
+            "desired_future_state": "Användaren slipper dubbelinmatning och får både historik och prognos utan dubbelräkning.",
+            "pain_points": [],
+            "desired_support": [
+              "Användaren slipper dubbelinmatning och får både historik och prognos utan dubbelräkning."
+            ],
+            "exceptions": [],
+            "notes": "Source refs: EP-006, EP-007, EP-008; US-055, US-060, US-061, US-064, US-066",
+            "linked_epic_ids": [
+              "EP-006",
+              "EP-007",
+              "EP-008"
+            ],
+            "linked_story_idea_ids": [
+              "US-055",
+              "US-060",
+              "US-061",
+              "US-064",
+              "US-066"
+            ],
+            "linked_figma_refs": [],
+            "steps": [
+              {
+                "id": "JNY-004-STEP-01",
+                "title": "Användaren öppnar köpmodalen.",
+                "actor": null,
+                "description": "Användaren öppnar köpmodalen.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-004-STEP-02",
+                "title": "Köpet är förifyllt med handlare, belopp, kategori, betalare och datum.",
+                "actor": null,
+                "description": "Köpet är förifyllt med handlare, belopp, kategori, betalare och datum.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-004-STEP-03",
+                "title": "Användaren väljer skapa återkommande.",
+                "actor": null,
+                "description": "Användaren väljer skapa återkommande.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-004-STEP-04",
+                "title": "Appen skapar återkommande utgift med köpdatum som första betalningsda...",
+                "actor": null,
+                "description": "Appen skapar återkommande utgift med köpdatum som första betalningsdatum.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-004-STEP-05",
+                "title": "Originalköpet kopplas som första betalning och försvinner inte ur his...",
+                "actor": null,
+                "description": "Originalköpet kopplas som första betalning och försvinner inte ur historiken.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              }
+            ],
+            "coverage": {
+              "status": "unanalysed",
+              "suggested_epic_ids": [],
+              "suggested_story_idea_ids": [],
+              "suggested_new_story_ideas": [],
+              "notes": null
+            }
+          },
+          {
+            "id": "JNY-005",
+            "title": "Göra återkommande till enskilt köp",
+            "type": "user",
+            "primary_actor": "Användare som felklassat en kostnad",
+            "supporting_actors": [],
+            "goal": "Korrigera en post som inte längre ska påverka återkommande prognos.",
+            "trigger": "Användaren upptäcker att en återkommande utgift egentligen var ett enskilt köp.",
+            "narrative": "Fel klassning kan rättas utan manuell kopiering.",
+            "value_moment": "Fel klassning kan rättas utan manuell kopiering.",
+            "success_signals": [
+              "Fel klassning kan rättas utan manuell kopiering."
+            ],
+            "current_state": null,
+            "desired_future_state": "Fel klassning kan rättas utan manuell kopiering.",
+            "pain_points": [],
+            "desired_support": [
+              "Fel klassning kan rättas utan manuell kopiering."
+            ],
+            "exceptions": [],
+            "notes": "Source refs: EP-002, EP-006, EP-007; US-012, US-043, US-062, US-063",
+            "linked_epic_ids": [
+              "EP-002",
+              "EP-006",
+              "EP-007"
+            ],
+            "linked_story_idea_ids": [
+              "US-012",
+              "US-043",
+              "US-062",
+              "US-063"
+            ],
+            "linked_figma_refs": [],
+            "steps": [
+              {
+                "id": "JNY-005-STEP-01",
+                "title": "Användaren öppnar utgiftsdetaljen.",
+                "actor": null,
+                "description": "Användaren öppnar utgiftsdetaljen.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-005-STEP-02",
+                "title": "Användaren väljer konvertera till enskilt köp.",
+                "actor": null,
+                "description": "Användaren väljer konvertera till enskilt köp.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-005-STEP-03",
+                "title": "Appen skapar köp med motsvarande data.",
+                "actor": null,
+                "description": "Appen skapar köp med motsvarande data.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-005-STEP-04",
+                "title": "Återkommande utgift tas bort/avslutas enligt konverteringsregel och k...",
+                "actor": null,
+                "description": "Återkommande utgift tas bort/avslutas enligt konverteringsregel och kopplade köp lossas.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              }
+            ],
+            "coverage": {
+              "status": "unanalysed",
+              "suggested_epic_ids": [],
+              "suggested_story_idea_ids": [],
+              "suggested_new_story_ideas": [],
+              "notes": null
+            }
+          },
+          {
+            "id": "JNY-006",
+            "title": "Analysera påverkan",
+            "type": "user",
+            "primary_actor": "Användare som vill prioritera nästa beslut",
+            "supporting_actors": [],
+            "goal": "Se vilka kostnader, handlare, kategorier och perioder som påverkar mest.",
+            "trigger": "Användaren går till Statistik efter att ha lagt in/importerat data.",
+            "narrative": "Pengalistor rankar efter det mått de säger: totalbelopp, antal eller medel som visad sekundärinformation.",
+            "value_moment": "Pengalistor rankar efter det mått de säger: totalbelopp, antal eller medel som visad sekundärinformation.",
+            "success_signals": [
+              "Pengalistor rankar efter det mått de säger: totalbelopp, antal eller medel som visad sekundärinformation."
+            ],
+            "current_state": null,
+            "desired_future_state": "Pengalistor rankar efter det mått de säger: totalbelopp, antal eller medel som visad sekundärinformation.",
+            "pain_points": [],
+            "desired_support": [
+              "Pengalistor rankar efter det mått de säger: totalbelopp, antal eller medel som visad sekundärinformation."
+            ],
+            "exceptions": [],
+            "notes": "Source refs: EP-008; US-064, US-065, US-066, US-067, US-068, US-069, US-070, US-071, US-072, US-074, US-075",
+            "linked_epic_ids": [
+              "EP-008"
+            ],
+            "linked_story_idea_ids": [
+              "US-064",
+              "US-065",
+              "US-066",
+              "US-067",
+              "US-068",
+              "US-069",
+              "US-070",
+              "US-071",
+              "US-072",
+              "US-074",
+              "US-075"
+            ],
+            "linked_figma_refs": [],
+            "steps": [
+              {
+                "id": "JNY-006-STEP-01",
+                "title": "Användaren öppnar Statistik.",
+                "actor": null,
+                "description": "Användaren öppnar Statistik.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-006-STEP-02",
+                "title": "Appen visar återkommande analys, köpvolym, budgetutfall och beslutsin...",
+                "actor": null,
+                "description": "Appen visar återkommande analys, köpvolym, budgetutfall och beslutsinsikter.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-006-STEP-03",
+                "title": "Användaren granskar \"Mest pengar\" och \"Flest transaktioner\" separat.",
+                "actor": null,
+                "description": "Användaren granskar \"Mest pengar\" och \"Flest transaktioner\" separat.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-006-STEP-04",
+                "title": "Användaren identifierar en topphandlare, kategori eller dragningsdag.",
+                "actor": null,
+                "description": "Användaren identifierar en topphandlare, kategori eller dragningsdag.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-006-STEP-05",
+                "title": "Användaren går tillbaka till relevant detalj eller filter.",
+                "actor": null,
+                "description": "Användaren går tillbaka till relevant detalj eller filter.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              }
+            ],
+            "coverage": {
+              "status": "unanalysed",
+              "suggested_epic_ids": [],
+              "suggested_story_idea_ids": [],
+              "suggested_new_story_ideas": [],
+              "notes": null
+            }
+          },
+          {
+            "id": "JNY-007",
+            "title": "Skydda lokal data",
+            "type": "user",
+            "primary_actor": "Användare som vill undvika datatapp",
+            "supporting_actors": [],
+            "goal": "Exportera, spara eller flytta data utan konto.",
+            "trigger": "Användaren går till Data-vyn eller ska byta enhet/browser.",
+            "narrative": "Appen är lokal-first men gör backup och flytt tydligt och möjligt.",
+            "value_moment": "Appen är lokal-first men gör backup och flytt tydligt och möjligt.",
+            "success_signals": [
+              "Appen är lokal-first men gör backup och flytt tydligt och möjligt."
+            ],
+            "current_state": null,
+            "desired_future_state": "Appen är lokal-first men gör backup och flytt tydligt och möjligt.",
+            "pain_points": [],
+            "desired_support": [
+              "Appen är lokal-first men gör backup och flytt tydligt och möjligt."
+            ],
+            "exceptions": [],
+            "notes": "Source refs: EP-009, EP-012; US-076, US-077, US-078, US-079, US-080, US-081, US-082, US-083, US-084, US-099, US-100",
+            "linked_epic_ids": [
+              "EP-009",
+              "EP-012"
+            ],
+            "linked_story_idea_ids": [
+              "US-076",
+              "US-077",
+              "US-078",
+              "US-079",
+              "US-080",
+              "US-081",
+              "US-082",
+              "US-083",
+              "US-084",
+              "US-099",
+              "US-100"
+            ],
+            "linked_figma_refs": [],
+            "steps": [
+              {
+                "id": "JNY-007-STEP-01",
+                "title": "Användaren läser lokal datarisk i Data-vyn.",
+                "actor": null,
+                "description": "Användaren läser lokal datarisk i Data-vyn.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-007-STEP-02",
+                "title": "Användaren exporterar JSON/ZIP eller skapar datafil.",
+                "actor": null,
+                "description": "Användaren exporterar JSON/ZIP eller skapar datafil.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-007-STEP-03",
+                "title": "Vid ny miljö importerar användaren filen som ny plånbok eller ersätte...",
+                "actor": null,
+                "description": "Vid ny miljö importerar användaren filen som ny plånbok eller ersätter state via datafil.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-007-STEP-04",
+                "title": "Vid behov skapas PDF/CSV för rapport eller vidare analys.",
+                "actor": null,
+                "description": "Vid behov skapas PDF/CSV för rapport eller vidare analys.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              }
+            ],
+            "coverage": {
+              "status": "unanalysed",
+              "suggested_epic_ids": [],
+              "suggested_story_idea_ids": [],
+              "suggested_new_story_ideas": [],
+              "notes": null
+            }
+          },
+          {
+            "id": "JNY-008",
+            "title": "Anpassa signaler och moduler",
+            "type": "user",
+            "primary_actor": "Power user eller hushållsansvarig",
+            "supporting_actors": [],
+            "goal": "Göra appens språk och funktioner mer relevanta för vardagen.",
+            "trigger": "Användaren vill kalla Business för Utlägg eller dölja köpmodul.",
+            "narrative": "Anpassning ändrar språk och synlighet konsekvent utan att ändra historisk data.",
+            "value_moment": "Anpassning ändrar språk och synlighet konsekvent utan att ändra historisk data.",
+            "success_signals": [
+              "Anpassning ändrar språk och synlighet konsekvent utan att ändra historisk data."
+            ],
+            "current_state": null,
+            "desired_future_state": "Anpassning ändrar språk och synlighet konsekvent utan att ändra historisk data.",
+            "pain_points": [],
+            "desired_support": [
+              "Anpassning ändrar språk och synlighet konsekvent utan att ändra historisk data."
+            ],
+            "exceptions": [],
+            "notes": "Source refs: EP-007, EP-012; US-058, US-097, US-098",
+            "linked_epic_ids": [
+              "EP-007",
+              "EP-012"
+            ],
+            "linked_story_idea_ids": [
+              "US-058",
+              "US-097",
+              "US-098"
+            ],
+            "linked_figma_refs": [],
+            "steps": [
+              {
+                "id": "JNY-008-STEP-01",
+                "title": "Användaren öppnar Data/inställningar.",
+                "actor": null,
+                "description": "Användaren öppnar Data/inställningar.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-008-STEP-02",
+                "title": "Användaren byter label på business-signalen.",
+                "actor": null,
+                "description": "Användaren byter label på business-signalen.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-008-STEP-03",
+                "title": "Användaren slår på/av inköpsmodul eller testar planflagga.",
+                "actor": null,
+                "description": "Användaren slår på/av inköpsmodul eller testar planflagga.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              },
+              {
+                "id": "JNY-008-STEP-04",
+                "title": "Appen visar ny term i radar, filter, köpmodal och statistik.",
+                "actor": null,
+                "description": "Appen visar ny term i radar, filter, köpmodal och statistik.",
+                "current_pain": null,
+                "desired_support": null,
+                "decision_point": false
+              }
+            ],
+            "coverage": {
+              "status": "unanalysed",
+              "suggested_epic_ids": [],
+              "suggested_story_idea_ids": [],
+              "suggested_new_story_ideas": [],
+              "notes": null
+            }
+          }
+        ]
+      }
+    ],
+    "downstream_ai_instructions": {
+      "initiativeType": "AD",
+      "aiLevel": 3,
+      "mandatoryControls": [
+        {
+          "id": "MC-1",
+          "title": "Preserve Epic -> Story -> Test traceability",
+          "description": "Keep downstream AI outputs linked from Epic through Story to later test intent.",
+          "enabled": true
+        },
+        {
+          "id": "MC-2",
+          "title": "Preserve AI-level-specific review expectations",
+          "description": "Keep review strictness aligned with the current AI level.",
+          "enabled": true
+        },
+        {
+          "id": "MC-3",
+          "title": "Preserve human approval on critical decisions",
+          "description": "Do not let downstream AI remove human approval where decision impact or governance requires it.",
+          "enabled": true
+        },
+        {
+          "id": "MC-4",
+          "title": "Preserve security/privacy/compliance constraints",
+          "description": "Carry security, privacy, compliance, and data sensitivity constraints forward into downstream AI behavior.",
+          "enabled": true
+        },
+        {
+          "id": "MC-5",
+          "title": "Preserve testability and binary acceptance intent",
+          "description": "Keep downstream refinement tied to later testability and acceptance clarity.",
+          "enabled": true
+        },
+        {
+          "id": "MC-6",
+          "title": "Preserve reproducibility expectations at higher AI levels",
+          "description": "At higher AI levels, keep logs, reproducibility, and reviewability expectations visible in downstream work.",
+          "enabled": true
+        }
+      ],
+      "refinementPreferences": [
+        {
+          "id": "E1",
+          "group": "epic",
+          "title": "Keep each Epic centered on one coherent capability/value area",
+          "description": "Prefer clear scope and one main value center per Epic",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "E2",
+          "group": "epic",
+          "title": "Separate user-facing Epics from enabling/platform/compliance Epics",
+          "description": "Avoid mixing visible user change with enabling work unless needed",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "E3",
+          "group": "epic",
+          "title": "Minimize cross-Epic dependencies",
+          "description": "Prefer decomposition that reduces orchestration overhead",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "E4",
+          "group": "epic",
+          "title": "Preserve Journey Context during Epic refinement",
+          "description": "Keep flow context visible when Journey Context exists",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "E5",
+          "group": "epic",
+          "title": "Prefer standard patterns before variants",
+          "description": "Reuse common refinement patterns before special cases",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "E6",
+          "group": "epic",
+          "title": "Model transition/coexistence work as explicit Epics",
+          "description": "Separate migration/coexistence concerns when needed",
+          "recommended": "NO",
+          "selectedValue": "NO",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "E7",
+          "group": "epic",
+          "title": "Model operability/stability work as explicit Epics",
+          "description": "Make runability/stability visible as delivery structure when useful",
+          "recommended": "NO",
+          "selectedValue": "NO",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "S1",
+          "group": "story",
+          "title": "Keep each Story Idea centered on one primary intent",
+          "description": "Prefer one main intent per Story Idea",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "S2",
+          "group": "story",
+          "title": "Tie each Story Idea to an actor, journey step, or trigger",
+          "description": "Preserve context when refining Story Ideas",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "S3",
+          "group": "story",
+          "title": "Split large Story Ideas before Design if verification would be hard",
+          "description": "Prefer refinement into verifiable units",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "S4",
+          "group": "story",
+          "title": "Require future testability when refining Story Ideas",
+          "description": "Keep refined Story Ideas mappable to later testable delivery",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": false,
+          "rationale": null
+        },
+        {
+          "id": "S5",
+          "group": "story",
+          "title": "Keep architecture direction lightweight at Story Idea level",
+          "description": "Avoid locking technical design too early",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "S6",
+          "group": "story",
+          "title": "Force Story Type classification during refinement",
+          "description": "Preserve explicit Story category such as Feature, Refactor, Bugfix, Exploration",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "S7",
+          "group": "story",
+          "title": "Force AI Usage Scope visibility when downstream AI is expected",
+          "description": "Preserve visibility of intended AI usage",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "S8",
+          "group": "story",
+          "title": "Require rollback/fallback thinking for risky Story Ideas",
+          "description": "Preserve reversibility thinking for risky work",
+          "recommended": "NO",
+          "selectedValue": "NO",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "J1",
+          "group": "journey",
+          "title": "Use Journey Context as a primary refinement source when present",
+          "description": "Let Journey Context actively influence refinement",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "J2",
+          "group": "journey",
+          "title": "Preserve journey-to-story traceability when Journey Context exists",
+          "description": "Preserve explainability between Journeys and Story Ideas",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "J3",
+          "group": "journey",
+          "title": "Allow AI to suggest missing journey/story mappings",
+          "description": "Enable AI-assisted mapping support",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "J4",
+          "group": "journey",
+          "title": "Prefer actor and flow continuity when Journey Context exists",
+          "description": "Preserve flow continuity in refinement",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "J5",
+          "group": "journey",
+          "title": "Allow Story Ideas to stand without Journey Context when Journey Context is absent",
+          "description": "Keep tool useful without Journey Context",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": false,
+          "rationale": null
+        },
+        {
+          "id": "D1",
+          "group": "design",
+          "title": "Optimize for modularity and future changeability",
+          "description": "Favor low coupling and evolvable structure",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "D2",
+          "group": "design",
+          "title": "Prefer reuse when fit-for-purpose",
+          "description": "Evaluate existing assets before new build-out",
+          "recommended": "NO",
+          "selectedValue": "NO",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "D3",
+          "group": "design",
+          "title": "Prefer integration discipline over shortcuts",
+          "description": "Avoid tactical and opaque integration design",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "D4",
+          "group": "design",
+          "title": "Make data ownership and classification explicit",
+          "description": "Preserve data boundaries and source-of-truth clarity",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": false,
+          "rationale": null
+        },
+        {
+          "id": "D5",
+          "group": "design",
+          "title": "Preserve security/privacy/compliance in design proposals",
+          "description": "Keep compliance and sensitive-data rules active in Design",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": false,
+          "rationale": null
+        },
+        {
+          "id": "D6",
+          "group": "design",
+          "title": "Make observability and operability part of Design",
+          "description": "Keep runability and diagnostics as design concerns",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "D7",
+          "group": "design",
+          "title": "Separate experimentation zones from stable zones",
+          "description": "Preserve experimentation boundary where relevant",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "D8",
+          "group": "design",
+          "title": "Prefer continuity over architectural purity when needed",
+          "description": "Favor safer transition when context requires it",
+          "recommended": "NO",
+          "selectedValue": "NO",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "D9",
+          "group": "design",
+          "title": "Prefer phased rollout over big bang",
+          "description": "Preserve controlled rollout thinking",
+          "recommended": "NO",
+          "selectedValue": "NO",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "B1",
+          "group": "build",
+          "title": "Require Story and Epic traceability for all implementation work",
+          "description": "Preserve implementation lineage",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": false,
+          "rationale": null
+        },
+        {
+          "id": "B2",
+          "group": "build",
+          "title": "Require traceability for AI-generated implementation artifacts",
+          "description": "Keep AI-generated artifacts linked to Story/Test context",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": false,
+          "rationale": null
+        },
+        {
+          "id": "B3",
+          "group": "build",
+          "title": "Enforce AI-level-specific review and reproducibility rules",
+          "description": "Keep review/reproducibility aligned with AI level",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": false,
+          "rationale": null
+        },
+        {
+          "id": "B4",
+          "group": "build",
+          "title": "Require test strategy proportional to Story risk/type",
+          "description": "Preserve verification expectations",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": false,
+          "rationale": null
+        },
+        {
+          "id": "B5",
+          "group": "build",
+          "title": "Require architecture/security checks in review or CI/CD",
+          "description": "Keep structural and security controls active in Build",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "B6",
+          "group": "build",
+          "title": "Prefer automatically generated release evidence",
+          "description": "Favor generated evidence/logging where feasible",
+          "recommended": "YES",
+          "selectedValue": "YES",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "B7",
+          "group": "build",
+          "title": "Treat support/runbook/handover updates as part of done",
+          "description": "Preserve operational readiness in completion rules",
+          "recommended": "NO",
+          "selectedValue": "NO",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "B8",
+          "group": "build",
+          "title": "Prefer low blast radius and reversibility in rollout",
+          "description": "Favor smaller and safer release mechanics",
+          "recommended": "NO",
+          "selectedValue": "NO",
+          "allowNa": true,
+          "rationale": null
+        },
+        {
+          "id": "B9",
+          "group": "build",
+          "title": "Allow emergency handling only with retroactive traceability",
+          "description": "Preserve control in urgent cases",
+          "recommended": "NO",
+          "selectedValue": "NO",
+          "allowNa": false,
+          "rationale": null
+        }
+      ],
+      "customInstructions": [
+        {
+          "id": "traceable-ai-delivery-protocol",
+          "title": "Traceable AI Delivery Protocol",
+          "body": "# Traceable AI Delivery Protocol\n\nYou are receiving a product handoff for AI-assisted discovery, design, refinement and implementation.\n\nYou may work with high autonomy, but you must preserve full traceability from original handoff to design decisions, implementation artifacts, tests, extra scope and final customer reporting.\n\n## Prime Directive\n\nStory Ideas are directional input, not a final implementation contract.\n\nPreserve the original baseline and record all learning, refinement, decomposition, design choices, scope additions, scope removals, deferrals and implementation changes as traceable decisions.\n\nNo implementation artifact may exist without one of: baseline requirement ID, approved decision ID, approved extension ID, technical enabler ID, bugfix ID, or documented risk/compliance reason.\n\nIf a change cannot be mapped to a trace ID, stop and classify it before implementation.\n\n## 1. Baseline Freeze\n\nAt the start of work, create or identify a frozen baseline from the handoff. The baseline must include Outcome IDs, Epic IDs, Story Idea IDs, non-functional requirement IDs, UX constraint IDs, scope-in items, scope-out items, acceptance/test intent where available, and journey mappings where available.\n\nThe baseline is immutable. Later learning must be captured as decisions, extensions, drops, risks, technical enablers or bugfixes.\n\nRequired artifacts: docs/traceability/requirements-baseline.md and docs/traceability/requirements-baseline.json. If the project uses another documentation root, place equivalent files there and state the path.\n\n## 2. Trace ID Taxonomy\n\nUse these IDs consistently: OUT-* Outcome; EP-* Epic; SC-* Story or Story Idea; NFR-* Non-functional requirement; UX-* UX/design constraint; J-* Journey or journey step; DEC-* Decision or refinement inside existing scope; EXT-* Scope extension beyond baseline; DROP-* explicitly deferred/rejected/removed scope; TECH-* technical enabler; BUG-* bugfix or regression correction; RISK-* risk/security/privacy/compliance/release concern.\n\nEvery implementation artifact must map to at least one trace ID.\n\n## 3. Change Classification\n\nBefore proposing or implementing a change, classify it as one of: implements_baseline, refines_baseline, extends_scope, touches_scope_out, drops_or_defers_scope, technical_enabler, or bugfix_or_regression.\n\nrefines_baseline requires a DEC-*. extends_scope requires an EXT-*. touches_scope_out requires explicit human approval and must be marked as experimental or customer-decision-needed unless formally approved. drops_or_defers_scope requires a DROP-*. technical_enabler requires TECH-* linked to source IDs. bugfix_or_regression requires BUG-* linked to affected source IDs.\n\n## 4. Human Approval Gate\n\nThe human must explicitly approve material scope changes, anything touching scope-out, security/privacy/data/compliance decisions, business rule changes, user-facing terminology changes with customer impact, release readiness decisions, acceptance of partially implemented requirements, and decisions to defer/reject/drop scope.\n\nTreat lightweight answers such as OK, ej OK, andra, defer, OK som experiment, OK som scope-tillagg, and OK men kraver kundbeslut as formal decision inputs and record them.\n\n## 5. Required AI Behavior Before Build\n\nBefore implementation, state which baseline IDs are being implemented, whether DEC/EXT/DROP/TECH/BUG/RISK is required, whether human approval is required, which artifacts will likely be created or updated, which tests or verification evidence will be added, and whether any scope-out item is touched.\n\nDo not proceed with material implementation if trace classification is missing.\n\n## 6. Decision Log\n\nMaintain docs/traceability/decision-log.md throughout discovery, design and build. Each entry must include ID, date, type, source baseline IDs, decision, motivation, human approval status, customer decision status if relevant, implementation status, and affected artifacts when known.\n\n## 7. Implementation Map\n\nMaintain docs/traceability/implementation-map.json. The map must connect requirement or decision ID, status, implementation artifacts, tests, documentation, known deviations, remaining gaps, and evidence.\n\n## 8. Untraced Artifact Rule\n\nPeriodically check for artifacts that appear to implement user-facing behavior without trace mapping. Maintain docs/traceability/untraced-artifacts-report.md. Resolve each untraced artifact by mapping it to an existing trace ID, creating and approving DEC/EXT/TECH/BUG, marking it as risk/compliance, or removing/deferring it.\n\n## 9. Scope-Out Handling\n\nIf implementation touches a scope-out item, stop and ask for explicit approval before building or formalizing it. Mark the decision as experiment, requires_customer_decision, approved_extension, rejected, or deferred. Do not silently convert scope-out into delivered scope.\n\n## 10. Testing and Verification\n\nVerification must be proportional to risk and story type. For each implemented item, record automated tests where practical, manual verification where automation is not practical, gaps where neither exists, and build or release evidence when relevant. Testing must remain tied to trace IDs.\n\n## 11. Report Generation\n\nAt the end of each phase and before customer delivery, generate docs/traceability/traceability-report.md and optionally docs/traceability/traceability-pack.json. Separate agreed baseline scope, implemented according to baseline, implemented differently through decision, extra implemented through extension, deferred/rejected/dropped, scope-out touched, gaps, untraced artifacts, tests/release evidence, and customer decisions required.\n\nDo not hide extra implementation inside original scope. Extra implementation is acceptable only when explicitly classified and traceable.\n\n## 12. Definition of Done\n\nA story, decision, extension, bugfix or technical enabler is not done until it has a trace ID, mapped implementation artifacts, proportional verification, recorded deviations, recorded required human/customer decisions, and appears correctly in the traceability report.\n\n## 13. Accelerated Discovery Constraint\n\nAccelerated discovery does not remove traceability obligations. Proceed autonomously for ordinary refinement, but pause or request explicit approval when a feature is outside baseline scope, a scope-out item is touched, user-facing behavior changes materially, data/security/privacy assumptions change, implementation cannot be mapped to a trace ID, or a requirement is weakened, deferred or reinterpreted.\n\nFor low-risk refinements inside baseline scope, create a proposed decision-log entry and continue unless the human rejects it.\n\n## 14. Existing Guidance Still Applies\n\nPreserve Outcome -> Epic -> Story -> Test. Keep each Epic centered on one coherent capability/value area. Separate user-facing Epics from enabling, platform and compliance Epics. Minimize cross-Epic dependencies. Preserve Journey Context during refinement when it exists. Prefer standard reusable patterns before local variants. Model transition, coexistence, operability and stability work explicitly.\n\nRefine Story Ideas so they remain mappable to later implementation and test intent. Keep each Story Idea centered on one primary intent. Tie each Story Idea to an actor, journey step or trigger where possible. Split large Story Ideas before design if verification would be hard. Require future testability. Keep architecture direction lightweight at Story Idea level. Classify Story Type. Make AI Usage Scope visible when downstream AI is expected.\n\nPreserve security, privacy, compliance, data ownership and data classification in every design proposal. Separate experimentation zones from stable zones. Prefer phased rollout, low blast radius and reversibility. Treat support, runbook and handover updates as part of done when relevant. Review strictness and reproducibility must remain aligned with AI Level 3.\n\n## 15. Final Customer Reporting Standard\n\nFinal customer-facing reporting must answer: what was agreed from the original handoff; what was implemented exactly as agreed; what was implemented differently and why; what was added beyond original scope; which extra items require customer approval; what was deferred or rejected; what remains as a gap; what tests or evidence prove the implementation; and whether any untraced artifacts remain.\n\nTarget final claim: We can show full traceability from baseline to decisions, implementation, tests and final report. Extra functionality is explicitly marked as extension or experiment. No production-facing feature remains without a documented reason.\n\n## Tool Implementation Requirement\n\nWhen implemented in a tool, the tool should inject this protocol into each BMAD handoff, create baseline files, propose DEC/EXT/DROP/TECH/BUG/RISK IDs, interpret simple human answers as decisions, update the decision log, update the implementation map, flag scope-out, flag untraced artifacts, and generate the customer report.",
+          "category": "General",
+          "priority": "High"
+        }
+      ],
+      "deviations": [],
+      "warnings": [],
+      "hard_validation_issues": [],
+      "generatedGuidance": {
+        "epicRefinementGuide": [
+          "Interpret Epic refinement through the AD delivery posture at AI Level 3.",
+          "Keep the main delivery structure Outcome -> Epic -> Story -> Test intact.",
+          "Keep each Epic centered on one coherent capability/value area: AI should refine Epics into coherent value/capability containers.",
+          "Separate user-facing Epics from enabling/platform/compliance Epics: AI should split enabling work into distinct Epics.",
+          "Minimize cross-Epic dependencies: AI should reduce coupling between Epics.",
+          "Preserve Journey Context during Epic refinement: AI should preserve journey influence in Epic refinement.",
+          "Prefer standard patterns before variants: AI should challenge local variants and seek reusable Epic patterns.",
+          "Model transition/coexistence work as explicit Epics: AI may mix transition work into target-state Epics.",
+          "Model operability/stability work as explicit Epics: AI may keep focus on visible change only.",
+          "Always-on controls remain active: Preserve Epic -> Story -> Test traceability; Preserve AI-level-specific review expectations; Preserve human approval on critical decisions; Preserve security/privacy/compliance constraints; Preserve testability and binary acceptance intent; Preserve reproducibility expectations at higher AI levels."
+        ],
+        "storyIdeaRefinementGuide": [
+          "Refine Story Ideas so they remain mappable to later implementation and test intent.",
+          "Keep each Story Idea centered on one primary intent: AI should split oversized Story Ideas into focused candidates.",
+          "Tie each Story Idea to an actor, journey step, or trigger: AI should preserve role/flow/trigger context.",
+          "Split large Story Ideas before Design if verification would be hard: AI should split Story Ideas that would be hard to verify.",
+          "Require future testability when refining Story Ideas: AI must reformulate Story Ideas so they can become testable later.",
+          "Keep architecture direction lightweight at Story Idea level: AI should avoid premature architecture lock-in.",
+          "Force Story Type classification during refinement: AI should classify Story Ideas explicitly.",
+          "Force AI Usage Scope visibility when downstream AI is expected: AI should mark expected AI usage scope explicitly.",
+          "Require rollback/fallback thinking for risky Story Ideas: AI may postpone rollback/fallback thinking.",
+          "Do not let downstream AI remove testability, traceability, or human review expectations."
+        ],
+        "journeyUsageGuide": [
+          "Journey Context exists and should be considered when refining Epics, Story Ideas, Design guidance, and Build guidance.",
+          "Use Journey Context as a primary refinement source when present: AI should actively use Journey Context to refine Epics and Story Ideas.",
+          "Preserve journey-to-story traceability when Journey Context exists: AI should preserve visible traceability between Journey elements and Story Ideas.",
+          "Allow AI to suggest missing journey/story mappings: AI should propose likely Story/Epic mappings where missing.",
+          "Prefer actor and flow continuity when Journey Context exists: AI should favor actor/flow continuity when refining.",
+          "Allow Story Ideas to stand without Journey Context when Journey Context is absent: AI should proceed normally even if no Journey Context exists.",
+          "If Journey Context is absent, do not block Story Idea refinement solely because journey data is missing."
+        ],
+        "designAiGuidance": [
+          "In Design, inherit the Source of Truth from Outcome, Problem, Baseline, Solution Context, Constraints, UX Principles, Non-functional Requirements, Additional Requirements, Data Sensitivity, Journey Context when present, Epics, Story Ideas, and optional references.",
+          "Optimize for modularity and future changeability: AI should prefer changeable modular structures.",
+          "Prefer reuse when fit-for-purpose: AI may propose more net-new implementation.",
+          "Prefer integration discipline over shortcuts: AI should avoid tactical shortcuts in integration design.",
+          "Make data ownership and classification explicit: AI must keep data ownership/classification explicit.",
+          "Preserve security/privacy/compliance in design proposals: AI must embed security/privacy/compliance constraints in design proposals.",
+          "Make observability and operability part of Design: AI should include observability/operability in design thinking.",
+          "Separate experimentation zones from stable zones: AI should preserve exploration vs. stable separation.",
+          "Prefer continuity over architectural purity when needed: AI may favor cleaner target architecture over safer transition.",
+          "Prefer phased rollout over big bang: AI may allow larger cutover plans.",
+          "Security, privacy, compliance, and data classification constraints must stay active in every design proposal."
+        ],
+        "buildAiGuidance": [
+          "In Build, preserve Story and Epic lineage, review discipline, test expectations, release evidence, and rollout control.",
+          "Require Story and Epic traceability for all implementation work: AI must preserve explicit Story/Epic traceability.",
+          "Require traceability for AI-generated implementation artifacts: AI output must remain traceable.",
+          "Enforce AI-level-specific review and reproducibility rules: AI must tailor Build guidance to AI level.",
+          "Require test strategy proportional to Story risk/type: AI must require verification proportional to risk and type.",
+          "Require architecture/security checks in review or CI/CD: AI should include structural/security checks in Build guidance.",
+          "Prefer automatically generated release evidence: AI should assume evidence generation where practical.",
+          "Treat support/runbook/handover updates as part of done: AI may focus mainly on code/test.",
+          "Prefer low blast radius and reversibility in rollout: AI may allow broader-impact changes.",
+          "Allow emergency handling only with retroactive traceability: AI may normalize emergency shortcuts.",
+          "Review strictness and reproducibility must remain aligned with AI Level 3."
+        ],
+        "customInstructionAppendix": [
+          {
+            "title": "Traceable AI Delivery Protocol",
+            "category": "General",
+            "priority": "High",
+            "body": "# Traceable AI Delivery Protocol\n\nYou are receiving a product handoff for AI-assisted discovery, design, refinement and implementation.\n\nYou may work with high autonomy, but you must preserve full traceability from original handoff to design decisions, implementation artifacts, tests, extra scope and final customer reporting.\n\n## Prime Directive\n\nStory Ideas are directional input, not a final implementation contract.\n\nPreserve the original baseline and record all learning, refinement, decomposition, design choices, scope additions, scope removals, deferrals and implementation changes as traceable decisions.\n\nNo implementation artifact may exist without one of: baseline requirement ID, approved decision ID, approved extension ID, technical enabler ID, bugfix ID, or documented risk/compliance reason.\n\nIf a change cannot be mapped to a trace ID, stop and classify it before implementation.\n\n## 1. Baseline Freeze\n\nAt the start of work, create or identify a frozen baseline from the handoff. The baseline must include Outcome IDs, Epic IDs, Story Idea IDs, non-functional requirement IDs, UX constraint IDs, scope-in items, scope-out items, acceptance/test intent where available, and journey mappings where available.\n\nThe baseline is immutable. Later learning must be captured as decisions, extensions, drops, risks, technical enablers or bugfixes.\n\nRequired artifacts: docs/traceability/requirements-baseline.md and docs/traceability/requirements-baseline.json. If the project uses another documentation root, place equivalent files there and state the path.\n\n## 2. Trace ID Taxonomy\n\nUse these IDs consistently: OUT-* Outcome; EP-* Epic; SC-* Story or Story Idea; NFR-* Non-functional requirement; UX-* UX/design constraint; J-* Journey or journey step; DEC-* Decision or refinement inside existing scope; EXT-* Scope extension beyond baseline; DROP-* explicitly deferred/rejected/removed scope; TECH-* technical enabler; BUG-* bugfix or regression correction; RISK-* risk/security/privacy/compliance/release concern.\n\nEvery implementation artifact must map to at least one trace ID.\n\n## 3. Change Classification\n\nBefore proposing or implementing a change, classify it as one of: implements_baseline, refines_baseline, extends_scope, touches_scope_out, drops_or_defers_scope, technical_enabler, or bugfix_or_regression.\n\nrefines_baseline requires a DEC-*. extends_scope requires an EXT-*. touches_scope_out requires explicit human approval and must be marked as experimental or customer-decision-needed unless formally approved. drops_or_defers_scope requires a DROP-*. technical_enabler requires TECH-* linked to source IDs. bugfix_or_regression requires BUG-* linked to affected source IDs.\n\n## 4. Human Approval Gate\n\nThe human must explicitly approve material scope changes, anything touching scope-out, security/privacy/data/compliance decisions, business rule changes, user-facing terminology changes with customer impact, release readiness decisions, acceptance of partially implemented requirements, and decisions to defer/reject/drop scope.\n\nTreat lightweight answers such as OK, ej OK, andra, defer, OK som experiment, OK som scope-tillagg, and OK men kraver kundbeslut as formal decision inputs and record them.\n\n## 5. Required AI Behavior Before Build\n\nBefore implementation, state which baseline IDs are being implemented, whether DEC/EXT/DROP/TECH/BUG/RISK is required, whether human approval is required, which artifacts will likely be created or updated, which tests or verification evidence will be added, and whether any scope-out item is touched.\n\nDo not proceed with material implementation if trace classification is missing.\n\n## 6. Decision Log\n\nMaintain docs/traceability/decision-log.md throughout discovery, design and build. Each entry must include ID, date, type, source baseline IDs, decision, motivation, human approval status, customer decision status if relevant, implementation status, and affected artifacts when known.\n\n## 7. Implementation Map\n\nMaintain docs/traceability/implementation-map.json. The map must connect requirement or decision ID, status, implementation artifacts, tests, documentation, known deviations, remaining gaps, and evidence.\n\n## 8. Untraced Artifact Rule\n\nPeriodically check for artifacts that appear to implement user-facing behavior without trace mapping. Maintain docs/traceability/untraced-artifacts-report.md. Resolve each untraced artifact by mapping it to an existing trace ID, creating and approving DEC/EXT/TECH/BUG, marking it as risk/compliance, or removing/deferring it.\n\n## 9. Scope-Out Handling\n\nIf implementation touches a scope-out item, stop and ask for explicit approval before building or formalizing it. Mark the decision as experiment, requires_customer_decision, approved_extension, rejected, or deferred. Do not silently convert scope-out into delivered scope.\n\n## 10. Testing and Verification\n\nVerification must be proportional to risk and story type. For each implemented item, record automated tests where practical, manual verification where automation is not practical, gaps where neither exists, and build or release evidence when relevant. Testing must remain tied to trace IDs.\n\n## 11. Report Generation\n\nAt the end of each phase and before customer delivery, generate docs/traceability/traceability-report.md and optionally docs/traceability/traceability-pack.json. Separate agreed baseline scope, implemented according to baseline, implemented differently through decision, extra implemented through extension, deferred/rejected/dropped, scope-out touched, gaps, untraced artifacts, tests/release evidence, and customer decisions required.\n\nDo not hide extra implementation inside original scope. Extra implementation is acceptable only when explicitly classified and traceable.\n\n## 12. Definition of Done\n\nA story, decision, extension, bugfix or technical enabler is not done until it has a trace ID, mapped implementation artifacts, proportional verification, recorded deviations, recorded required human/customer decisions, and appears correctly in the traceability report.\n\n## 13. Accelerated Discovery Constraint\n\nAccelerated discovery does not remove traceability obligations. Proceed autonomously for ordinary refinement, but pause or request explicit approval when a feature is outside baseline scope, a scope-out item is touched, user-facing behavior changes materially, data/security/privacy assumptions change, implementation cannot be mapped to a trace ID, or a requirement is weakened, deferred or reinterpreted.\n\nFor low-risk refinements inside baseline scope, create a proposed decision-log entry and continue unless the human rejects it.\n\n## 14. Existing Guidance Still Applies\n\nPreserve Outcome -> Epic -> Story -> Test. Keep each Epic centered on one coherent capability/value area. Separate user-facing Epics from enabling, platform and compliance Epics. Minimize cross-Epic dependencies. Preserve Journey Context during refinement when it exists. Prefer standard reusable patterns before local variants. Model transition, coexistence, operability and stability work explicitly.\n\nRefine Story Ideas so they remain mappable to later implementation and test intent. Keep each Story Idea centered on one primary intent. Tie each Story Idea to an actor, journey step or trigger where possible. Split large Story Ideas before design if verification would be hard. Require future testability. Keep architecture direction lightweight at Story Idea level. Classify Story Type. Make AI Usage Scope visible when downstream AI is expected.\n\nPreserve security, privacy, compliance, data ownership and data classification in every design proposal. Separate experimentation zones from stable zones. Prefer phased rollout, low blast radius and reversibility. Treat support, runbook and handover updates as part of done when relevant. Review strictness and reproducibility must remain aligned with AI Level 3.\n\n## 15. Final Customer Reporting Standard\n\nFinal customer-facing reporting must answer: what was agreed from the original handoff; what was implemented exactly as agreed; what was implemented differently and why; what was added beyond original scope; which extra items require customer approval; what was deferred or rejected; what remains as a gap; what tests or evidence prove the implementation; and whether any untraced artifacts remain.\n\nTarget final claim: We can show full traceability from baseline to decisions, implementation, tests and final report. Extra functionality is explicitly marked as extension or experiment. No production-facing feature remains without a documented reason.\n\n## Tool Implementation Requirement\n\nWhen implemented in a tool, the tool should inject this protocol into each BMAD handoff, create baseline files, propose DEC/EXT/DROP/TECH/BUG/RISK IDs, interpret simple human answers as decisions, update the decision log, update the implementation map, flag scope-out, flag untraced artifacts, and generate the customer report."
+          }
+        ],
+        "deviationsSummary": [
+          "No preferences currently deviate from the recommended defaults."
+        ],
+        "warningValidationNotes": [
+          "No hard validation issues or warnings are currently active."
+        ]
+      }
+    },
+    "approvals": {
+      "status": "approved",
+      "approved_version": 43,
+      "approved_at": "2026-05-05T13:35:42.531Z",
+      "signoffs": [
+        {
+          "role": "aqa",
+          "person": "Denzel Washington",
+          "role_title": "AI Quality Authority",
+          "side": "supplier",
+          "note": "ok",
+          "approved_at": "2026-05-05T13:35:40.497Z"
+        },
+        {
+          "role": "value owner",
+          "person": "Anne Hathaway",
+          "role_title": "Value Owner",
+          "side": "customer",
+          "note": "ok",
+          "approved_at": "2026-05-05T13:35:21.088Z"
+        }
+      ]
+    },
+    "next_step_handoff": {
+      "recommended_use": "Use this Framing package as the governed source of truth when you move into design, story refinement or structured delivery planning with BMAD or another AI tool.",
+      "references": [
+        "Treat the customer handshake, baseline and AI/risk posture as the framing source of truth.",
+        "Treat Epics and Story Ideas as directional input for design and later delivery refinement, not as fixed implementation steps.",
+        "If later steps create Delivery Stories or extra work items, keep them traceable back to this Framing package or record them explicitly as feedback-loop additions.",
+        "Use the approval section to understand whether this Framing version is already signed off for Tollgate 1.",
+        "Use the UX sketch references where they exist to preserve visual intent in the next step."
+      ]
+    },
+    "metadata": {
+      "lifecycle_state": "active",
+      "origin_type": "imported",
+      "exported_at": "2026-05-05T13:37:57.648Z"
+    }
+  }
+}
